@@ -1,0 +1,13 @@
+[package]
+name = "lens-bench"
+edition.workspace = true
+version.workspace = true
+
+[[bin]]
+name = "lens-bench"
+path = "src/lens_main.rs"
+
+[dependencies]
+lens-macho.workspace = true
+lens-arm64.workspace = true
+lens-objc.workspace = true

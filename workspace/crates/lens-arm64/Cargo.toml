@@ -1,0 +1,7 @@
+[package]
+name = "lens-arm64"
+edition.workspace = true
+version.workspace = true
+
+[lib]
+path = "src/lens_lib.rs"

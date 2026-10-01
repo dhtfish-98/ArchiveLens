@@ -1,0 +1,10 @@
+[package]
+name = "lens-macho"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+
+[lib]
+path = "src/lens_lib.rs"

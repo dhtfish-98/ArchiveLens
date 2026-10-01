@@ -1,0 +1,11 @@
+[package]
+name = "lens-objc"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+lens-macho.workspace = true
+lens-image.workspace = true
+
+[lib]
+path = "src/lens_lib.rs"

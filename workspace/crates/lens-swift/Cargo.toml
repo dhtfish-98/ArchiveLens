@@ -1,0 +1,10 @@
+[package]
+name = "lens-swift"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+lens-macho.workspace = true
+
+[lib]
+path = "src/lens_lib.rs"

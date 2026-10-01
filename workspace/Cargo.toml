@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/lens-macho",
+    "crates/lens-image",
+    "crates/lens-objc",
+    "crates/lens-swift",
+    "crates/lens-arm64",
+    "bin/lens-cli",
+    "bin/lens-bench",
+    "bin/lens-gui",
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+
+[workspace.dependencies]
+thiserror = "1"
+clap = { version = "4", features = ["derive"] }
+insta = "1"
+lens-macho = { path = "crates/lens-macho" }
+lens-image = { path = "crates/lens-image" }
+lens-objc = { path = "crates/lens-objc" }
+lens-swift = { path = "crates/lens-swift" }
+lens-arm64 = { path = "crates/lens-arm64" }

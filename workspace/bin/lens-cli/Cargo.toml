@@ -1,0 +1,21 @@
+[package]
+name = "archivelens"
+edition.workspace = true
+version.workspace = true
+
+[[bin]]
+name = "archivelens"
+path = "src/lens_main.rs"
+
+[dependencies]
+lens-image.workspace = true
+lens-macho.workspace = true
+lens-objc.workspace = true
+lens-swift.workspace = true
+lens-arm64.workspace = true
+clap.workspace = true
+zip = { version = "2", default-features = false, features = ["deflate"] }
+
+[dev-dependencies]
+lens-macho.workspace = true
+zip = { version = "2", default-features = false, features = ["deflate"] }
