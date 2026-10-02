@@ -3,19 +3,14 @@
   "algorithm": "sha256",
   "scope": "All public files except this self-describing manifest.",
   "files": {
-    ".github/workflows/ci.yml": {
-      "sha256": "f1fecc37c11a5da13ea1fb134bea0bc9499acf65d5427364d27e8a6ec9d8b6fe",
-      "bytes": 1326,
+    ".github/workflows/archive-tests.yml": {
+      "sha256": "4dd27dab9ee2508dd9c2b7dd2556d8c6a070898be946abb612f125d537a24db4",
+      "bytes": 369,
       "mode": "0o644"
     },
-    ".github/workflows/contracts.yml": {
-      "sha256": "8c1780ccf808734be148da83d19d3a4522e89e4c8eed198ca5c2f2785f342319",
-      "bytes": 737,
-      "mode": "0o644"
-    },
-    ".github/workflows/release.yml": {
-      "sha256": "b805d92766626012868578f0394623441b40fafb48a62e4598112447e28a4f82",
-      "bytes": 2354,
+    ".github/workflows/source-contracts.yml": {
+      "sha256": "3fe1045c543c1baad7e1850cf0e56ff89e86f88ec9369b3b1cace3873fb7e785",
+      "bytes": 903,
       "mode": "0o644"
     },
     ".gitignore": {
@@ -44,8 +39,8 @@
       "mode": "0o644"
     },
     "README.md": {
-      "sha256": "dc289011e60b43cf4571506e04b6d07b61d98a98a8522e86fae486e15908a933",
-      "bytes": 2467,
+      "sha256": "f78955a26dba1675fd5cbcdbe527bb92c196e21be67309545eb81f654d1b74cf",
+      "bytes": 2474,
       "mode": "0o644"
     },
     "RENAME_MAP.json": {

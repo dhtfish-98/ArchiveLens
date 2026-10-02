@@ -13,9 +13,12 @@ jobs:
           ref: a21259b096344b9c69dac508f1fe935c785be9f2
           path: .upstream
       - uses: dtolnay/rust-toolchain@stable
-      - run: python3 -m pip install capstone==5.0.7
-      - run: python3 verification/lens_upstream_lock.py .upstream
-      - run: python3 verification/lens_contract.py --upstream .upstream --output contract.json
+      - name: Install isolated Python dependencies
+        run: |
+          python3 -m venv .validation-venv
+          .validation-venv/bin/python -m pip install capstone==5.0.7
+      - run: .validation-venv/bin/python verification/lens_upstream_lock.py .upstream
+      - run: .validation-venv/bin/python verification/lens_contract.py --upstream .upstream --output contract.json
       - uses: actions/upload-artifact@v4
         with:
           name: lens-contract-report
