@@ -17,3 +17,11 @@ Only executable/project branding, compile dates and NSLog timestamps/process IDs
 - Interactive GUI launch, Windows execution, real-device IPA/app flows and complete program semantics are unverified.
 - The hosted CI workflow has been authored but has not yet run on GitHub at this local handoff.
 - Passing these finite checks is not a proof of every input or complete feature equivalence.
+
+## Defensive assistant launch changes — 2026-10-02
+
+Two current GUI tests pass: concurrent chats use separate private directories, prompt files are exclusive mode 0600 under mode 0700 on Unix, and dropping a directory cleans up only that chat; assistant arguments explicitly require Codex read-only sandbox and disable Claude tools without automatic grants. The GUI source compiles as part of these tests.
+
+The previous unrestricted Codex flag and automatic Claude Bash grant have been removed. Codex is launched with user configuration/rules ignored in a private cwd, and Claude uses safe-mode with an empty built-in tool set. Current helper parameters require CLI versions supporting these flags; unsupported flags must fail rather than fall back to unrestricted execution. No request was sent to an external assistant to validate these settings.
+
+Earlier CLI/crate comparison results remain finite historical evidence. Current CI verifies the changed commit. Interactive GUI use, Windows behavior, actual external assistant behavior and all untrusted-input resource limits remain OPEN. Earlier v1.0.0 packages contain the predecessor's launch policy; current-source builds are required.

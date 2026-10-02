@@ -1,5 +1,7 @@
 # ArchiveLens
 
+防御用途、实际能力及本轮验证范围见 [DEFENSIVE_SCOPE.md](DEFENSIVE_SCOPE.md)。
+
 ArchiveLens is a Rust derivative of [JRBusiness/REipa](https://github.com/JRBusiness/REipa) with renamed owned source files and symbols. It preserves the upstream feature set within the tested contracts. See [source/license record](ORIGIN.md), [verification record](VALIDATION.md) and [complete mapping](RENAME_MAP.json).
 
 `workspace/crates` contains the Mach-O loader, image view, Objective-C/Swift metadata and ARM64 decoding/analysis layers. `workspace/bin` contains the CLI, benchmark and GUI adapters. `bench` contains the Capstone comparison tools.

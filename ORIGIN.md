@@ -9,3 +9,7 @@ Modified owned source files have new names, modules/types/functions/local bindin
 Compiler entry points, external frameworks/trait overrides/selectors/KVC keys, serialization and command-line fields, required build metadata filenames, and fixed test fixture bytes remain compatibility boundaries. These exceptions are explicit in the mapping; replacing external names would change functionality. Original Apple Mach-O layout/field values and input class/method names are preserved.
 
 No claim is made that renaming establishes authorship, eligibility for an application, or a formal proof of complete behavioral equivalence.
+
+## Subsequent defensive maintenance — 2026-10-02
+
+The earlier name/file mapping remains a historical transformation record. Later source changes and scope documents are Codex-assisted maintenance, not independent authorship of the upstream algorithms. Current changes and their finite verification are listed in DEFENSIVE_SCOPE.md and VALIDATION.md. Earlier release packages and equivalence reports describe their corresponding earlier commits. Original attribution and license obligations remain.
