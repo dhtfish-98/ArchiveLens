@@ -27,7 +27,6 @@ jobs:
       SCCACHE_DIR: ${{ github.workspace }}/Build/缓存/sccache
       NODE_COMPILE_CACHE: ${{ github.workspace }}/Build/缓存/node
       RUSTUP_HOME: ${{ github.workspace }}/Build/缓存/rustup
-      CARGO_TARGET_DIR: ${{ github.workspace }}/Build/输出/cargo-target
     steps:
       - uses: actions/checkout@v4
       - name: Stage source and restored project inputs under Build
