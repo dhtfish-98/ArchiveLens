@@ -6,3 +6,10 @@ __pycache__/
 .DS_Store
 contract.json
 *.xcuserstate
+
+# All generated build outputs and staging are local.
+!/Build/
+/Build/*
+!/Build/.gitignore
+__pycache__/
+*.py[cod]

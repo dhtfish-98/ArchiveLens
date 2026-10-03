@@ -8,8 +8,34 @@ permissions:
 jobs:
   test:
     runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}/Build/源码
+    env:
+      TMPDIR: ${{ github.workspace }}/Build/临时
+      TMP: ${{ github.workspace }}/Build/临时
+      TEMP: ${{ github.workspace }}/Build/临时
+      PYTHONPYCACHEPREFIX: ${{ github.workspace }}/Build/缓存/python
+      PIP_CACHE_DIR: ${{ github.workspace }}/Build/缓存/pip
+      npm_config_cache: ${{ github.workspace }}/Build/缓存/npm
+      RUFF_CACHE_DIR: ${{ github.workspace }}/Build/缓存/ruff
+      GOCACHE: ${{ github.workspace }}/Build/缓存/go
+      GOMODCACHE: ${{ github.workspace }}/Build/缓存/go-mod
+      GOTMPDIR: ${{ github.workspace }}/Build/临时
+      GOPATH: ${{ github.workspace }}/Build/缓存/go-path
+      GOBIN: ${{ github.workspace }}/Build/输出/go-bin
+      CARGO_HOME: ${{ github.workspace }}/Build/缓存/cargo
+      XDG_CACHE_HOME: ${{ github.workspace }}/Build/缓存/xdg
+      CCACHE_DIR: ${{ github.workspace }}/Build/缓存/ccache
+      SCCACHE_DIR: ${{ github.workspace }}/Build/缓存/sccache
+      NODE_COMPILE_CACHE: ${{ github.workspace }}/Build/缓存/node
+      RUSTUP_HOME: ${{ github.workspace }}/Build/缓存/rustup
+      CARGO_TARGET_DIR: ${{ github.workspace }}/Build/输出/cargo-target
     steps:
       - uses: actions/checkout@v4
+      - name: Stage source and restored project inputs under Build
+        run: ${{ runner.os == 'Windows' && 'python' || 'python3' }} 构建.py --stage --ci
+        working-directory: ${{ github.workspace }}
       - uses: dtolnay/rust-toolchain@stable
       - name: Run the renamed Rust workspace
         run: cargo test --locked --workspace --manifest-path workspace/Cargo.toml

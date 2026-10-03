@@ -1,0 +1,1861 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "ArchiveLens",
+  "author": "dhtfish98",
+  "kind": "rust",
+  "base_public_commit": "ea9e4af7e4f800d7cc0ead414a4fc3b9a7c20702",
+  "restored_inputs": [
+    {
+      "original": "AGENTS.md",
+      "stored": "项目文档/AGENTS.md",
+      "sha256": "e9c4358264895fec7a629592738af45d5f3981d313ecf19ac6e30d16b6c5c283"
+    },
+    {
+      "original": "CLAUDE.md",
+      "stored": "项目文档/CLAUDE.md",
+      "sha256": "0d97d435401a33e4a28a910005540b0149ff9f2e7509a28cf89a8048dffb2683"
+    },
+    {
+      "original": "DEFENSIVE_SCOPE.md",
+      "stored": "项目文档/DEFENSIVE_SCOPE.md",
+      "sha256": "039a2d3458a5812b3947eda567e28c4339a977ebe471c3b3ad21d89fa10422c1"
+    },
+    {
+      "original": "LICENSE",
+      "stored": "项目文档/LICENSE",
+      "sha256": "b235dbb468f854d4900cc197ae470e051cce3f12fc5eba9a16062394d10a4e19"
+    },
+    {
+      "original": "ORIGIN.md",
+      "stored": "项目文档/ORIGIN.md",
+      "sha256": "1d949253ae9ebd16ec1d1165315bd475bda870fc323d4861ff5b2ff84a173a01"
+    },
+    {
+      "original": "README.md",
+      "stored": "项目文档/README.md",
+      "sha256": "f57b2dbe403cfb10df2297e5e48fda8ae3528d55376cb902090cf44a7ca5932f"
+    },
+    {
+      "original": "SECURITY.md",
+      "stored": "项目文档/SECURITY.md",
+      "sha256": "d2aa5e3960ca3dbb16007e27d4ec49f4be6c4cec2933a12dc550e3605366a1a5"
+    },
+    {
+      "original": "UPSTREAM_GUIDE.md",
+      "stored": "项目文档/UPSTREAM_GUIDE.md",
+      "sha256": "a8fb82bca40d4d0e6409a97117517479a0b97acc10a344a763e7ed2a43bc5385"
+    },
+    {
+      "original": "VALIDATION.md",
+      "stored": "项目文档/VALIDATION.md",
+      "sha256": "7f4a8c4894fb8872b0c6f6dbf07f6bdd124ed5b24039bbe65e8716b3b3a3b99b"
+    },
+    {
+      "original": "bench/REPORT.md",
+      "stored": "项目文档/bench/REPORT.md",
+      "sha256": "7325c9b49647d4db3b92803109e753b26aa56b1c407a2bca4185c52a86ac12c2"
+    },
+    {
+      "original": "vendor-notices/ab_glyph-0.2.32/LICENSE",
+      "stored": "项目文档/vendor-notices/ab_glyph-0.2.32/LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "original": "vendor-notices/ab_glyph_rasterizer-0.1.10/LICENSE",
+      "stored": "项目文档/vendor-notices/ab_glyph_rasterizer-0.1.10/LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "original": "vendor-notices/accesskit-0.16.3/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/accesskit-0.16.3/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/accesskit-0.16.3/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/accesskit-0.16.3/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/accesskit_consumer-0.24.3/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/accesskit_consumer-0.24.3/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/accesskit_consumer-0.24.3/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/accesskit_consumer-0.24.3/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/accesskit_macos-0.17.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/accesskit_macos-0.17.4/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/accesskit_macos-0.17.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/accesskit_macos-0.17.4/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/accesskit_winit-0.22.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/accesskit_winit-0.22.4/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/accesskit_winit-0.22.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/accesskit_winit-0.22.4/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/adler2-2.0.1/LICENSE-0BSD",
+      "stored": "项目文档/vendor-notices/adler2-2.0.1/LICENSE-0BSD",
+      "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17"
+    },
+    {
+      "original": "vendor-notices/adler2-2.0.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/adler2-2.0.1/LICENSE-APACHE",
+      "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb"
+    },
+    {
+      "original": "vendor-notices/adler2-2.0.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/adler2-2.0.1/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/ahash-0.8.12/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/ahash-0.8.12/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/ahash-0.8.12/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/ahash-0.8.12/LICENSE-MIT",
+      "sha256": "0444c6991eead6822f7b9102e654448d51624431119546492e8b231db42c48bb"
+    },
+    {
+      "original": "vendor-notices/anstream-1.0.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/anstream-1.0.0/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/anstream-1.0.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/anstream-1.0.0/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/anstyle-1.0.14/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/anstyle-1.0.14/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/anstyle-1.0.14/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/anstyle-1.0.14/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/anstyle-parse-1.0.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/anstyle-parse-1.0.0/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/anstyle-parse-1.0.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/anstyle-parse-1.0.0/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/anstyle-query-1.1.5/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/anstyle-query-1.1.5/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/anstyle-query-1.1.5/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/anstyle-query-1.1.5/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/arboard-3.6.1/LICENSE-APACHE.txt",
+      "stored": "项目文档/vendor-notices/arboard-3.6.1/LICENSE-APACHE.txt",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "original": "vendor-notices/arboard-3.6.1/LICENSE-MIT.txt",
+      "stored": "项目文档/vendor-notices/arboard-3.6.1/LICENSE-MIT.txt",
+      "sha256": "f35468024534e0f4f16bb94cd0e88c87fbd1314f919c2645a07d350fb77b40c0"
+    },
+    {
+      "original": "vendor-notices/arrayvec-0.7.8/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/arrayvec-0.7.8/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/arrayvec-0.7.8/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/arrayvec-0.7.8/LICENSE-MIT",
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    {
+      "original": "vendor-notices/ash-0.38.0+1.3.281/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/ash-0.38.0+1.3.281/LICENSE-APACHE",
+      "sha256": "0e8a410375e1ee5c75c6198b08b534fec6e5edef766cf971bab4a404542636ab"
+    },
+    {
+      "original": "vendor-notices/ash-0.38.0+1.3.281/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/ash-0.38.0+1.3.281/LICENSE-MIT",
+      "sha256": "c733ccf8ab25df175a63d9d844677b98e3a5ab8f8de1c1616087e6868a7f948e"
+    },
+    {
+      "original": "vendor-notices/autocfg-1.5.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/autocfg-1.5.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/autocfg-1.5.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/autocfg-1.5.1/LICENSE-MIT",
+      "sha256": "27995d58ad5c1145c1a8cd86244ce844886958a35eb2b78c6b772748669999ac"
+    },
+    {
+      "original": "vendor-notices/bit-set-0.6.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/bit-set-0.6.0/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/bit-set-0.6.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/bit-set-0.6.0/LICENSE-MIT",
+      "sha256": "f51ac2c59a222f7476ce507ca879960e2b64ea64bb2786eefdbeb7b0b538d1b7"
+    },
+    {
+      "original": "vendor-notices/bit-vec-0.7.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/bit-vec-0.7.0/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/bit-vec-0.7.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/bit-vec-0.7.0/LICENSE-MIT",
+      "sha256": "f51ac2c59a222f7476ce507ca879960e2b64ea64bb2786eefdbeb7b0b538d1b7"
+    },
+    {
+      "original": "vendor-notices/bitflags-1.3.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/bitflags-1.3.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/bitflags-1.3.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/bitflags-1.3.2/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "original": "vendor-notices/bitflags-2.13.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/bitflags-2.13.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/bitflags-2.13.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/bitflags-2.13.2/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "original": "vendor-notices/block-0.1.6/README.md",
+      "stored": "项目文档/vendor-notices/block-0.1.6/README.md",
+      "sha256": "01c56329fa14f48ea1c9c7986c3660c41beeff2477f61c2d36bd8e666b9fc562"
+    },
+    {
+      "original": "vendor-notices/block2-0.5.1/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/block2-0.5.1/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/block2-0.6.2/LICENSE.md",
+      "stored": "项目文档/vendor-notices/block2-0.6.2/LICENSE.md",
+      "sha256": "7f976f7e9cb2d87df7230606feb932c3f21ac0e664045a775b600046ff850c54"
+    },
+    {
+      "original": "vendor-notices/bumpalo-3.20.3/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/bumpalo-3.20.3/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/bumpalo-3.20.3/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/bumpalo-3.20.3/LICENSE-MIT",
+      "sha256": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee"
+    },
+    {
+      "original": "vendor-notices/bytemuck-1.25.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/bytemuck-1.25.2/LICENSE-APACHE",
+      "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb"
+    },
+    {
+      "original": "vendor-notices/bytemuck-1.25.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/bytemuck-1.25.2/LICENSE-MIT",
+      "sha256": "9df9ba60a11af705f2e451b53762686e615d86f76b169cf075c3237730dbd7e2"
+    },
+    {
+      "original": "vendor-notices/bytemuck-1.25.2/LICENSE-ZLIB",
+      "stored": "项目文档/vendor-notices/bytemuck-1.25.2/LICENSE-ZLIB",
+      "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+    },
+    {
+      "original": "vendor-notices/bytemuck_derive-1.12.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/bytemuck_derive-1.12.1/LICENSE-APACHE",
+      "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb"
+    },
+    {
+      "original": "vendor-notices/bytemuck_derive-1.12.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/bytemuck_derive-1.12.1/LICENSE-MIT",
+      "sha256": "9df9ba60a11af705f2e451b53762686e615d86f76b169cf075c3237730dbd7e2"
+    },
+    {
+      "original": "vendor-notices/bytemuck_derive-1.12.1/LICENSE-ZLIB",
+      "stored": "项目文档/vendor-notices/bytemuck_derive-1.12.1/LICENSE-ZLIB",
+      "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+    },
+    {
+      "original": "vendor-notices/byteorder-lite-0.1.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/byteorder-lite-0.1.0/LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    {
+      "original": "vendor-notices/byteorder-lite-0.1.0/UNLICENSE",
+      "stored": "项目文档/vendor-notices/byteorder-lite-0.1.0/UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "original": "vendor-notices/cfg-if-1.0.5/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/cfg-if-1.0.5/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/cfg-if-1.0.5/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/cfg-if-1.0.5/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "original": "vendor-notices/cfg_aliases-0.1.1/LICENSE",
+      "stored": "项目文档/vendor-notices/cfg_aliases-0.1.1/LICENSE",
+      "sha256": "31b94860253d8ec7b4529f51901044d3b459d6292d996504a36b1bae3a36a812"
+    },
+    {
+      "original": "vendor-notices/cfg_aliases-0.1.1/NOTICES.md",
+      "stored": "项目文档/vendor-notices/cfg_aliases-0.1.1/NOTICES.md",
+      "sha256": "1e2b7ade3fb228130408b9990cae6a7618eb314c75aa0b164bfe485d9d9756ee"
+    },
+    {
+      "original": "vendor-notices/cfg_aliases-0.2.2/LICENSE",
+      "stored": "项目文档/vendor-notices/cfg_aliases-0.2.2/LICENSE",
+      "sha256": "31b94860253d8ec7b4529f51901044d3b459d6292d996504a36b1bae3a36a812"
+    },
+    {
+      "original": "vendor-notices/cfg_aliases-0.2.2/NOTICES.md",
+      "stored": "项目文档/vendor-notices/cfg_aliases-0.2.2/NOTICES.md",
+      "sha256": "1e2b7ade3fb228130408b9990cae6a7618eb314c75aa0b164bfe485d9d9756ee"
+    },
+    {
+      "original": "vendor-notices/cgl-0.3.2/COPYING",
+      "stored": "项目文档/vendor-notices/cgl-0.3.2/COPYING",
+      "sha256": "ec82b96487e9e778ee610c7ab245162464782cfa1f555c2299333f8dbe5c036a"
+    },
+    {
+      "original": "vendor-notices/cgl-0.3.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/cgl-0.3.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/cgl-0.3.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/cgl-0.3.2/LICENSE-MIT",
+      "sha256": "62065228e42caebca7e7d7db1204cbb867033de5982ca4009928915e4095f3a3"
+    },
+    {
+      "original": "vendor-notices/clap-4.6.7/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/clap-4.6.7/LICENSE-APACHE",
+      "sha256": "249fdb6694467dd615b259f7ddde07be3f8ae5a72cecebb0e24f6629af4215fe"
+    },
+    {
+      "original": "vendor-notices/clap-4.6.7/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/clap-4.6.7/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/clap_builder-4.6.7/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/clap_builder-4.6.7/LICENSE-APACHE",
+      "sha256": "249fdb6694467dd615b259f7ddde07be3f8ae5a72cecebb0e24f6629af4215fe"
+    },
+    {
+      "original": "vendor-notices/clap_builder-4.6.7/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/clap_builder-4.6.7/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/clap_derive-4.6.7/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/clap_derive-4.6.7/LICENSE-APACHE",
+      "sha256": "249fdb6694467dd615b259f7ddde07be3f8ae5a72cecebb0e24f6629af4215fe"
+    },
+    {
+      "original": "vendor-notices/clap_derive-4.6.7/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/clap_derive-4.6.7/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/clap_lex-1.1.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/clap_lex-1.1.1/LICENSE-APACHE",
+      "sha256": "249fdb6694467dd615b259f7ddde07be3f8ae5a72cecebb0e24f6629af4215fe"
+    },
+    {
+      "original": "vendor-notices/clap_lex-1.1.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/clap_lex-1.1.1/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/codespan-reporting-0.11.1/LICENSE",
+      "stored": "项目文档/vendor-notices/codespan-reporting-0.11.1/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "original": "vendor-notices/colorchoice-1.0.5/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/colorchoice-1.0.5/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/colorchoice-1.0.5/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/colorchoice-1.0.5/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/core-foundation-0.9.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/core-foundation-0.9.4/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/core-foundation-0.9.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/core-foundation-0.9.4/LICENSE-MIT",
+      "sha256": "62065228e42caebca7e7d7db1204cbb867033de5982ca4009928915e4095f3a3"
+    },
+    {
+      "original": "vendor-notices/core-foundation-sys-0.8.7/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/core-foundation-sys-0.8.7/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/core-foundation-sys-0.8.7/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/core-foundation-sys-0.8.7/LICENSE-MIT",
+      "sha256": "62065228e42caebca7e7d7db1204cbb867033de5982ca4009928915e4095f3a3"
+    },
+    {
+      "original": "vendor-notices/core-graphics-0.23.2/COPYRIGHT",
+      "stored": "项目文档/vendor-notices/core-graphics-0.23.2/COPYRIGHT",
+      "sha256": "ec82b96487e9e778ee610c7ab245162464782cfa1f555c2299333f8dbe5c036a"
+    },
+    {
+      "original": "vendor-notices/core-graphics-0.23.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/core-graphics-0.23.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/core-graphics-0.23.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/core-graphics-0.23.2/LICENSE-MIT",
+      "sha256": "62065228e42caebca7e7d7db1204cbb867033de5982ca4009928915e4095f3a3"
+    },
+    {
+      "original": "vendor-notices/core-graphics-types-0.1.3/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/core-graphics-types-0.1.3/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/core-graphics-types-0.1.3/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/core-graphics-types-0.1.3/LICENSE-MIT",
+      "sha256": "62065228e42caebca7e7d7db1204cbb867033de5982ca4009928915e4095f3a3"
+    },
+    {
+      "original": "vendor-notices/crc32fast-1.5.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/crc32fast-1.5.2/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/crc32fast-1.5.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/crc32fast-1.5.2/LICENSE-MIT",
+      "sha256": "61d383b05b87d78f94d2937e2580cce47226d17823c0430fbcad09596537efcf"
+    },
+    {
+      "original": "vendor-notices/cursor-icon-1.2.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/cursor-icon-1.2.0/LICENSE-APACHE",
+      "sha256": "b59affd015e517ed998dd735757f9a3693643cd389609947ed54074234a10784"
+    },
+    {
+      "original": "vendor-notices/cursor-icon-1.2.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/cursor-icon-1.2.0/LICENSE-MIT",
+      "sha256": "c138726a726ac37bae09d0f8a48e74e8e3aa8a8952fcd10fae0fb224cc1c05f1"
+    },
+    {
+      "original": "vendor-notices/cursor-icon-1.2.0/LICENSE-ZLIB",
+      "stored": "项目文档/vendor-notices/cursor-icon-1.2.0/LICENSE-ZLIB",
+      "sha256": "01e533bd94e8f1c32b2c2531e2c398de7d35d7804add3d574b4e1fe581d53537"
+    },
+    {
+      "original": "vendor-notices/dispatch-0.2.0/Cargo.toml.orig",
+      "stored": "项目文档/vendor-notices/dispatch-0.2.0/Cargo.toml.orig",
+      "sha256": "05c60b829931ef7f1f130735843c11f5cf9cc69546eca5fc941d014781c68e31"
+    },
+    {
+      "original": "vendor-notices/dispatch-0.2.0/README.md",
+      "stored": "项目文档/vendor-notices/dispatch-0.2.0/README.md",
+      "sha256": "9e581e0edb3dcc8238feda4bc709c8c91d43c286ac91f42cf6b0004c9335da58"
+    },
+    {
+      "original": "vendor-notices/dispatch2-0.3.1/LICENSE.md",
+      "stored": "项目文档/vendor-notices/dispatch2-0.3.1/LICENSE.md",
+      "sha256": "7f976f7e9cb2d87df7230606feb932c3f21ac0e664045a775b600046ff850c54"
+    },
+    {
+      "original": "vendor-notices/displaydoc-0.2.7/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/displaydoc-0.2.7/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/displaydoc-0.2.7/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/displaydoc-0.2.7/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/document-features-0.2.12/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/document-features-0.2.12/LICENSE-APACHE",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    {
+      "original": "vendor-notices/document-features-0.2.12/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/document-features-0.2.12/LICENSE-MIT",
+      "sha256": "aa893340d14b9844625be6a50ac644169a01b52f0211cbf81b09e1874c8cd81d"
+    },
+    {
+      "original": "vendor-notices/dpi-0.1.2/LICENSE",
+      "stored": "项目文档/vendor-notices/dpi-0.1.2/LICENSE",
+      "sha256": "6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a"
+    },
+    {
+      "original": "vendor-notices/dpi-0.1.2/LICENSE-LIBM-MIT",
+      "stored": "项目文档/vendor-notices/dpi-0.1.2/LICENSE-LIBM-MIT",
+      "sha256": "9eff396a99bafd208e7126602420d6864f6066c08b84485a5b032320a9c01997"
+    },
+    {
+      "original": "vendor-notices/ecolor-0.29.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/ecolor-0.29.1/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/ecolor-0.29.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/ecolor-0.29.1/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
+    },
+    {
+      "original": "vendor-notices/eframe-0.29.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/eframe-0.29.1/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/eframe-0.29.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/eframe-0.29.1/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
+    },
+    {
+      "original": "vendor-notices/egui-0.29.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/egui-0.29.1/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/egui-0.29.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/egui-0.29.1/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
+    },
+    {
+      "original": "vendor-notices/egui-wgpu-0.29.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/egui-wgpu-0.29.1/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/egui-wgpu-0.29.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/egui-wgpu-0.29.1/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
+    },
+    {
+      "original": "vendor-notices/egui-winit-0.29.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/egui-winit-0.29.1/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/egui-winit-0.29.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/egui-winit-0.29.1/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
+    },
+    {
+      "original": "vendor-notices/egui_glow-0.29.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/egui_glow-0.29.1/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/egui_glow-0.29.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/egui_glow-0.29.1/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
+    },
+    {
+      "original": "vendor-notices/emath-0.29.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/emath-0.29.1/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/emath-0.29.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/emath-0.29.1/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
+    },
+    {
+      "original": "vendor-notices/epaint-0.29.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/epaint-0.29.1/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "original": "vendor-notices/epaint-0.29.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/epaint-0.29.1/LICENSE-MIT",
+      "sha256": "95ca92f5f8ea5231f1580b3a2a799e8260af3114b900e1def5355a7f44bcf60c"
+    },
+    {
+      "original": "vendor-notices/epaint_default_fonts-0.29.1/fonts/OFL.txt",
+      "stored": "项目文档/vendor-notices/epaint_default_fonts-0.29.1/fonts/OFL.txt",
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "original": "vendor-notices/epaint_default_fonts-0.29.1/fonts/emoji-icon-font-mit-license.txt",
+      "stored": "项目文档/vendor-notices/epaint_default_fonts-0.29.1/fonts/emoji-icon-font-mit-license.txt",
+      "sha256": "b9d2c1d909aa149996fd4c91dcb92b2362a04431640c1d200959da94caf8cde1"
+    },
+    {
+      "original": "vendor-notices/equivalent-1.0.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/equivalent-1.0.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/equivalent-1.0.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/equivalent-1.0.2/LICENSE-MIT",
+      "sha256": "7365cc8878a1d7ce155a58c4ca09c3d7a6be413efa5334a80ea842912b669349"
+    },
+    {
+      "original": "vendor-notices/fdeflate-0.3.7/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/fdeflate-0.3.7/LICENSE-APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "original": "vendor-notices/fdeflate-0.3.7/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/fdeflate-0.3.7/LICENSE-MIT",
+      "sha256": "c77a4cf9da729987d0fe7ccd811e3bd27393914ddf3d23467c18cc22954513b3"
+    },
+    {
+      "original": "vendor-notices/flate2-1.1.10/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/flate2-1.1.10/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/flate2-1.1.10/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/flate2-1.1.10/LICENSE-MIT",
+      "sha256": "025436edff4cfcdde17a5811fdea78892d8482efd1abdec5a17872d07a4f2112"
+    },
+    {
+      "original": "vendor-notices/foldhash-0.1.5/LICENSE",
+      "stored": "项目文档/vendor-notices/foldhash-0.1.5/LICENSE",
+      "sha256": "b1181a40b2a7b25cf66fd01481713bc1005df082c53ef73e851e55071b102744"
+    },
+    {
+      "original": "vendor-notices/foreign-types-0.5.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/foreign-types-0.5.0/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/foreign-types-0.5.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/foreign-types-0.5.0/LICENSE-MIT",
+      "sha256": "333ea3aaa3cadb819f4acd9f9153f9feee060a995ca8710f32bc5bd9a4b91734"
+    },
+    {
+      "original": "vendor-notices/foreign-types-macros-0.2.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/foreign-types-macros-0.2.4/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/foreign-types-macros-0.2.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/foreign-types-macros-0.2.4/LICENSE-MIT",
+      "sha256": "333ea3aaa3cadb819f4acd9f9153f9feee060a995ca8710f32bc5bd9a4b91734"
+    },
+    {
+      "original": "vendor-notices/foreign-types-shared-0.3.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/foreign-types-shared-0.3.1/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/foreign-types-shared-0.3.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/foreign-types-shared-0.3.1/LICENSE-MIT",
+      "sha256": "333ea3aaa3cadb819f4acd9f9153f9feee060a995ca8710f32bc5bd9a4b91734"
+    },
+    {
+      "original": "vendor-notices/form_urlencoded-1.2.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/form_urlencoded-1.2.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/form_urlencoded-1.2.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/form_urlencoded-1.2.2/LICENSE-MIT",
+      "sha256": "20c7855c364d57ea4c97889a5e8d98470a9952dade37bd9248b9a54431670e5e"
+    },
+    {
+      "original": "vendor-notices/getrandom-0.3.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/getrandom-0.3.4/LICENSE-APACHE",
+      "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+    },
+    {
+      "original": "vendor-notices/getrandom-0.3.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/getrandom-0.3.4/LICENSE-MIT",
+      "sha256": "29e9fe5074bd27e0e5d5d110394fbbcd841baee2651a3c4b4560a632702cede4"
+    },
+    {
+      "original": "vendor-notices/glow-0.13.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/glow-0.13.1/LICENSE-APACHE",
+      "sha256": "b8601fc79bdf8d8088f0938bea861ffc63ed0eebbedf25f44ab2cf2e85bd7edc"
+    },
+    {
+      "original": "vendor-notices/glow-0.13.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/glow-0.13.1/LICENSE-MIT",
+      "sha256": "cdbd06e25b8c9c5d6019949d2de8123f56d29cee4166396423d2ba8c81700845"
+    },
+    {
+      "original": "vendor-notices/glow-0.13.1/LICENSE-ZLIB",
+      "stored": "项目文档/vendor-notices/glow-0.13.1/LICENSE-ZLIB",
+      "sha256": "636f644f1e149eb62961657c0e34953681eff64435653912e7bd19992666faa5"
+    },
+    {
+      "original": "vendor-notices/glow-0.14.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/glow-0.14.2/LICENSE-APACHE",
+      "sha256": "b8601fc79bdf8d8088f0938bea861ffc63ed0eebbedf25f44ab2cf2e85bd7edc"
+    },
+    {
+      "original": "vendor-notices/glow-0.14.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/glow-0.14.2/LICENSE-MIT",
+      "sha256": "cdbd06e25b8c9c5d6019949d2de8123f56d29cee4166396423d2ba8c81700845"
+    },
+    {
+      "original": "vendor-notices/glow-0.14.2/LICENSE-ZLIB",
+      "stored": "项目文档/vendor-notices/glow-0.14.2/LICENSE-ZLIB",
+      "sha256": "636f644f1e149eb62961657c0e34953681eff64435653912e7bd19992666faa5"
+    },
+    {
+      "original": "vendor-notices/glutin-0.32.3/LICENSE",
+      "stored": "项目文档/vendor-notices/glutin-0.32.3/LICENSE",
+      "sha256": "a4445427440043e8ce6fadf7a43fb906cb0d7f6c573a560a9f142cf9f9bf8ff4"
+    },
+    {
+      "original": "vendor-notices/glutin-winit-0.5.0/LICENSE",
+      "stored": "项目文档/vendor-notices/glutin-winit-0.5.0/LICENSE",
+      "sha256": "d35629aec828ca86834f76e4c813bd6a6f0dda9005da898b0f49021f8042c5bd"
+    },
+    {
+      "original": "vendor-notices/gpu-alloc-0.6.2/APACHE",
+      "stored": "项目文档/vendor-notices/gpu-alloc-0.6.2/APACHE",
+      "sha256": "58317934bf818c379e4215fad7e8dfb6812edff32c9557b8b039343f69711e08"
+    },
+    {
+      "original": "vendor-notices/gpu-alloc-0.6.2/COPYING",
+      "stored": "项目文档/vendor-notices/gpu-alloc-0.6.2/COPYING",
+      "sha256": "12121dfa588677007848ab922a45a1e3248868f6ff063598fceb3141d7897314"
+    },
+    {
+      "original": "vendor-notices/gpu-alloc-0.6.2/MIT",
+      "stored": "项目文档/vendor-notices/gpu-alloc-0.6.2/MIT",
+      "sha256": "f774bf68151714985324d90adbd59e8f271b7ba518608d871b6ba16464692879"
+    },
+    {
+      "original": "vendor-notices/gpu-alloc-types-0.3.1/APACHE",
+      "stored": "项目文档/vendor-notices/gpu-alloc-types-0.3.1/APACHE",
+      "sha256": "58317934bf818c379e4215fad7e8dfb6812edff32c9557b8b039343f69711e08"
+    },
+    {
+      "original": "vendor-notices/gpu-alloc-types-0.3.1/COPYING",
+      "stored": "项目文档/vendor-notices/gpu-alloc-types-0.3.1/COPYING",
+      "sha256": "12121dfa588677007848ab922a45a1e3248868f6ff063598fceb3141d7897314"
+    },
+    {
+      "original": "vendor-notices/gpu-alloc-types-0.3.1/MIT",
+      "stored": "项目文档/vendor-notices/gpu-alloc-types-0.3.1/MIT",
+      "sha256": "f774bf68151714985324d90adbd59e8f271b7ba518608d871b6ba16464692879"
+    },
+    {
+      "original": "vendor-notices/gpu-descriptor-0.3.2/APACHE",
+      "stored": "项目文档/vendor-notices/gpu-descriptor-0.3.2/APACHE",
+      "sha256": "6bec8c944a6d4251be50ac86bb4ca360bcce5aea472505dee2800e160bf1cdbf"
+    },
+    {
+      "original": "vendor-notices/gpu-descriptor-0.3.2/COPYING",
+      "stored": "项目文档/vendor-notices/gpu-descriptor-0.3.2/COPYING",
+      "sha256": "f72143f7e9d9fb8bd336b139fa22f825a299591c29f2f7338c5566347b137613"
+    },
+    {
+      "original": "vendor-notices/gpu-descriptor-0.3.2/MIT",
+      "stored": "项目文档/vendor-notices/gpu-descriptor-0.3.2/MIT",
+      "sha256": "5226e27d5fbc683db56c52853cdb9d15b69abadb525a60f95c862c2dbd77cdc8"
+    },
+    {
+      "original": "vendor-notices/gpu-descriptor-types-0.2.0/APACHE",
+      "stored": "项目文档/vendor-notices/gpu-descriptor-types-0.2.0/APACHE",
+      "sha256": "6bec8c944a6d4251be50ac86bb4ca360bcce5aea472505dee2800e160bf1cdbf"
+    },
+    {
+      "original": "vendor-notices/gpu-descriptor-types-0.2.0/COPYING",
+      "stored": "项目文档/vendor-notices/gpu-descriptor-types-0.2.0/COPYING",
+      "sha256": "f72143f7e9d9fb8bd336b139fa22f825a299591c29f2f7338c5566347b137613"
+    },
+    {
+      "original": "vendor-notices/gpu-descriptor-types-0.2.0/MIT",
+      "stored": "项目文档/vendor-notices/gpu-descriptor-types-0.2.0/MIT",
+      "sha256": "5226e27d5fbc683db56c52853cdb9d15b69abadb525a60f95c862c2dbd77cdc8"
+    },
+    {
+      "original": "vendor-notices/hashbrown-0.15.5/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/hashbrown-0.15.5/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/hashbrown-0.15.5/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/hashbrown-0.15.5/LICENSE-MIT",
+      "sha256": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+    },
+    {
+      "original": "vendor-notices/hashbrown-0.17.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/hashbrown-0.17.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/hashbrown-0.17.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/hashbrown-0.17.1/LICENSE-MIT",
+      "sha256": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+    },
+    {
+      "original": "vendor-notices/heck-0.5.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/heck-0.5.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/heck-0.5.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/heck-0.5.0/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    {
+      "original": "vendor-notices/hexf-parse-0.2.1/Cargo.toml.orig",
+      "stored": "项目文档/vendor-notices/hexf-parse-0.2.1/Cargo.toml.orig",
+      "sha256": "4a56dbdbc12054fd33b7a2634a45cbbe6fe12f5e6f4081002cbfa527f7220c70"
+    },
+    {
+      "original": "vendor-notices/icu_collections-2.3.0/LICENSE",
+      "stored": "项目文档/vendor-notices/icu_collections-2.3.0/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/icu_locale_core-2.3.0/LICENSE",
+      "stored": "项目文档/vendor-notices/icu_locale_core-2.3.0/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/icu_normalizer-2.3.0/LICENSE",
+      "stored": "项目文档/vendor-notices/icu_normalizer-2.3.0/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/icu_normalizer_data-2.3.0/LICENSE",
+      "stored": "项目文档/vendor-notices/icu_normalizer_data-2.3.0/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/icu_properties-2.3.0/LICENSE",
+      "stored": "项目文档/vendor-notices/icu_properties-2.3.0/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/icu_properties_data-2.3.0/LICENSE",
+      "stored": "项目文档/vendor-notices/icu_properties_data-2.3.0/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/icu_provider-2.3.1/LICENSE",
+      "stored": "项目文档/vendor-notices/icu_provider-2.3.1/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/idna-1.1.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/idna-1.1.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/idna-1.1.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/idna-1.1.0/LICENSE-MIT",
+      "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+    },
+    {
+      "original": "vendor-notices/idna_adapter-1.2.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/idna_adapter-1.2.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/idna_adapter-1.2.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/idna_adapter-1.2.2/LICENSE-MIT",
+      "sha256": "8b43ce8accd61e9d370b5ca9e9c4f953279b5c239926c62315b40e24df51b726"
+    },
+    {
+      "original": "vendor-notices/image-0.25.10/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/image-0.25.10/LICENSE-APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "original": "vendor-notices/image-0.25.10/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/image-0.25.10/LICENSE-MIT",
+      "sha256": "c77a4cf9da729987d0fe7ccd811e3bd27393914ddf3d23467c18cc22954513b3"
+    },
+    {
+      "original": "vendor-notices/immutable-chunkmap-2.1.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/immutable-chunkmap-2.1.4/LICENSE-APACHE",
+      "sha256": "7277e044486d82039c8855cf1611f57e64b7980213ba3589db49daf09dbdfd3e"
+    },
+    {
+      "original": "vendor-notices/immutable-chunkmap-2.1.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/immutable-chunkmap-2.1.4/LICENSE-MIT",
+      "sha256": "267f4a928bb3cf6ad37252621eb1199d2cb58560046b7dea4ec3f7a4cc9261a7"
+    },
+    {
+      "original": "vendor-notices/indexmap-2.14.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/indexmap-2.14.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/indexmap-2.14.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/indexmap-2.14.2/LICENSE-MIT",
+      "sha256": "ecc269ef87fd38a1d98e30bfac9ba964a9dbd9315c3770fed98d4d7cb5882055"
+    },
+    {
+      "original": "vendor-notices/is_terminal_polyfill-1.70.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/is_terminal_polyfill-1.70.2/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "original": "vendor-notices/is_terminal_polyfill-1.70.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/is_terminal_polyfill-1.70.2/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "original": "vendor-notices/itoa-1.0.18/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/itoa-1.0.18/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/itoa-1.0.18/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/itoa-1.0.18/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/khronos-egl-6.0.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/khronos-egl-6.0.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/khronos-egl-6.0.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/khronos-egl-6.0.0/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/libc-0.2.189/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/libc-0.2.189/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/libc-0.2.189/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/libc-0.2.189/LICENSE-MIT",
+      "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+    },
+    {
+      "original": "vendor-notices/libloading-0.8.9/LICENSE",
+      "stored": "项目文档/vendor-notices/libloading-0.8.9/LICENSE",
+      "sha256": "b29f8b01452350c20dd1af16ef83b598fea3053578ccc1c7a0ef40e57be2620f"
+    },
+    {
+      "original": "vendor-notices/litemap-0.8.3/LICENSE",
+      "stored": "项目文档/vendor-notices/litemap-0.8.3/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/litrs-1.0.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/litrs-1.0.0/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/litrs-1.0.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/litrs-1.0.0/LICENSE-MIT",
+      "sha256": "7dc1552e88f49132cb358b1b962fc5e79fa42d70bcbb88c526d33e45b8e98036"
+    },
+    {
+      "original": "vendor-notices/lock_api-0.4.14/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/lock_api-0.4.14/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/lock_api-0.4.14/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/lock_api-0.4.14/LICENSE-MIT",
+      "sha256": "c9a75f18b9ab2927829a208fc6aa2cf4e63b8420887ba29cdb265d6619ae82d5"
+    },
+    {
+      "original": "vendor-notices/log-0.4.34/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/log-0.4.34/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/log-0.4.34/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/log-0.4.34/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "original": "vendor-notices/malloc_buf-0.0.6/LICENSE",
+      "stored": "项目文档/vendor-notices/malloc_buf-0.0.6/LICENSE",
+      "sha256": "aced7b57e474a63edb5a724954222bf7659c01ceef0e648a03af799582991db7"
+    },
+    {
+      "original": "vendor-notices/memchr-2.8.3/COPYING",
+      "stored": "项目文档/vendor-notices/memchr-2.8.3/COPYING",
+      "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+    },
+    {
+      "original": "vendor-notices/memchr-2.8.3/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/memchr-2.8.3/LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    {
+      "original": "vendor-notices/memchr-2.8.3/UNLICENSE",
+      "stored": "项目文档/vendor-notices/memchr-2.8.3/UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "original": "vendor-notices/memoffset-0.9.1/LICENSE",
+      "stored": "项目文档/vendor-notices/memoffset-0.9.1/LICENSE",
+      "sha256": "3234ac55816264ee7b6c7ee27efd61cf0a1fe775806870e3d9b4c41ea73c5cb1"
+    },
+    {
+      "original": "vendor-notices/metal-0.29.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/metal-0.29.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/metal-0.29.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/metal-0.29.0/LICENSE-MIT",
+      "sha256": "0621878e61f0d0fda054bcbe02df75192c28bde1ecc8289cbd86aeba2dd72720"
+    },
+    {
+      "original": "vendor-notices/miniz_oxide-0.8.9/LICENSE",
+      "stored": "项目文档/vendor-notices/miniz_oxide-0.8.9/LICENSE",
+      "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+    },
+    {
+      "original": "vendor-notices/miniz_oxide-0.8.9/LICENSE-APACHE.md",
+      "stored": "项目文档/vendor-notices/miniz_oxide-0.8.9/LICENSE-APACHE.md",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "original": "vendor-notices/miniz_oxide-0.8.9/LICENSE-MIT.md",
+      "stored": "项目文档/vendor-notices/miniz_oxide-0.8.9/LICENSE-MIT.md",
+      "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+    },
+    {
+      "original": "vendor-notices/miniz_oxide-0.8.9/LICENSE-ZLIB.md",
+      "stored": "项目文档/vendor-notices/miniz_oxide-0.8.9/LICENSE-ZLIB.md",
+      "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+    },
+    {
+      "original": "vendor-notices/miniz_oxide-0.9.1/LICENSE",
+      "stored": "项目文档/vendor-notices/miniz_oxide-0.9.1/LICENSE",
+      "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+    },
+    {
+      "original": "vendor-notices/miniz_oxide-0.9.1/LICENSE-APACHE.md",
+      "stored": "项目文档/vendor-notices/miniz_oxide-0.9.1/LICENSE-APACHE.md",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "original": "vendor-notices/miniz_oxide-0.9.1/LICENSE-MIT.md",
+      "stored": "项目文档/vendor-notices/miniz_oxide-0.9.1/LICENSE-MIT.md",
+      "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+    },
+    {
+      "original": "vendor-notices/miniz_oxide-0.9.1/LICENSE-ZLIB.md",
+      "stored": "项目文档/vendor-notices/miniz_oxide-0.9.1/LICENSE-ZLIB.md",
+      "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+    },
+    {
+      "original": "vendor-notices/moxcms-0.8.1/LICENSE-APACHE.md",
+      "stored": "项目文档/vendor-notices/moxcms-0.8.1/LICENSE-APACHE.md",
+      "sha256": "90bf2d659c43045111b65c733ab2a6d4cbcb422a098368c8c58a9ba3db4ed0c5"
+    },
+    {
+      "original": "vendor-notices/moxcms-0.8.1/LICENSE.md",
+      "stored": "项目文档/vendor-notices/moxcms-0.8.1/LICENSE.md",
+      "sha256": "2aa92cada6431e75615e3fe6cb1a9082c98f777d48ae1c087c0da0e37f7b8bff"
+    },
+    {
+      "original": "vendor-notices/naga-22.1.0/LICENSE.APACHE",
+      "stored": "项目文档/vendor-notices/naga-22.1.0/LICENSE.APACHE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "original": "vendor-notices/naga-22.1.0/LICENSE.MIT",
+      "stored": "项目文档/vendor-notices/naga-22.1.0/LICENSE.MIT",
+      "sha256": "c7fea58d1cfe49634cd92e54fc10a9d871f4b275321a4cd8c09e449122caaeb4"
+    },
+    {
+      "original": "vendor-notices/nohash-hasher-0.2.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/nohash-hasher-0.2.0/LICENSE-APACHE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "original": "vendor-notices/nohash-hasher-0.2.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/nohash-hasher-0.2.0/LICENSE-MIT",
+      "sha256": "ec353d4fecf7963b4c054384557e5dbc3c7a717997eb4a3815b315721a6aa75a"
+    },
+    {
+      "original": "vendor-notices/num-traits-0.2.19/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/num-traits-0.2.19/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/num-traits-0.2.19/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/num-traits-0.2.19/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "original": "vendor-notices/objc-0.2.7/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/objc-0.2.7/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/objc-sys-0.3.5/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/objc-sys-0.3.5/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/objc2-0.5.2/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/objc2-0.5.2/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/objc2-0.6.4/LICENSE.md",
+      "stored": "项目文档/vendor-notices/objc2-0.6.4/LICENSE.md",
+      "sha256": "7f976f7e9cb2d87df7230606feb932c3f21ac0e664045a775b600046ff850c54"
+    },
+    {
+      "original": "vendor-notices/objc2-app-kit-0.2.2/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/objc2-app-kit-0.2.2/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/objc2-app-kit-0.3.2/LICENSE.md",
+      "stored": "项目文档/vendor-notices/objc2-app-kit-0.3.2/LICENSE.md",
+      "sha256": "7f976f7e9cb2d87df7230606feb932c3f21ac0e664045a775b600046ff850c54"
+    },
+    {
+      "original": "vendor-notices/objc2-core-data-0.2.2/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/objc2-core-data-0.2.2/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/objc2-core-foundation-0.3.2/LICENSE.md",
+      "stored": "项目文档/vendor-notices/objc2-core-foundation-0.3.2/LICENSE.md",
+      "sha256": "7f976f7e9cb2d87df7230606feb932c3f21ac0e664045a775b600046ff850c54"
+    },
+    {
+      "original": "vendor-notices/objc2-core-graphics-0.3.2/LICENSE.md",
+      "stored": "项目文档/vendor-notices/objc2-core-graphics-0.3.2/LICENSE.md",
+      "sha256": "7f976f7e9cb2d87df7230606feb932c3f21ac0e664045a775b600046ff850c54"
+    },
+    {
+      "original": "vendor-notices/objc2-core-image-0.2.2/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/objc2-core-image-0.2.2/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/objc2-encode-4.1.0/LICENSE.md",
+      "stored": "项目文档/vendor-notices/objc2-encode-4.1.0/LICENSE.md",
+      "sha256": "7f976f7e9cb2d87df7230606feb932c3f21ac0e664045a775b600046ff850c54"
+    },
+    {
+      "original": "vendor-notices/objc2-foundation-0.2.2/src/copying.rs",
+      "stored": "项目文档/vendor-notices/objc2-foundation-0.2.2/src/copying.rs",
+      "sha256": "6ef40ce213364039bb992742f8ca4ee2660f9f32669707f403cdd0f0b035a098"
+    },
+    {
+      "original": "vendor-notices/objc2-foundation-0.2.2/src/tests/copying.rs",
+      "stored": "项目文档/vendor-notices/objc2-foundation-0.2.2/src/tests/copying.rs",
+      "sha256": "23d608079a47693a26dfc8a5cb01894ad0136a50714d46221d9380aa4a4b4423"
+    },
+    {
+      "original": "vendor-notices/objc2-foundation-0.3.2/src/copying.rs",
+      "stored": "项目文档/vendor-notices/objc2-foundation-0.3.2/src/copying.rs",
+      "sha256": "259b22f571b54fed25f68ec5abd8eda223e7b0547a806f13ba797a0eabecd64f"
+    },
+    {
+      "original": "vendor-notices/objc2-foundation-0.3.2/src/tests/copying.rs",
+      "stored": "项目文档/vendor-notices/objc2-foundation-0.3.2/src/tests/copying.rs",
+      "sha256": "23d608079a47693a26dfc8a5cb01894ad0136a50714d46221d9380aa4a4b4423"
+    },
+    {
+      "original": "vendor-notices/objc2-io-surface-0.3.2/LICENSE.md",
+      "stored": "项目文档/vendor-notices/objc2-io-surface-0.3.2/LICENSE.md",
+      "sha256": "7f976f7e9cb2d87df7230606feb932c3f21ac0e664045a775b600046ff850c54"
+    },
+    {
+      "original": "vendor-notices/objc2-metal-0.2.2/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/objc2-metal-0.2.2/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/objc2-quartz-core-0.2.2/LICENSE.txt",
+      "stored": "项目文档/vendor-notices/objc2-quartz-core-0.2.2/LICENSE.txt",
+      "sha256": "e353f37b12aefbb9f9b29490e837cfee05d9bda70804b3562839a3285c1df1e5"
+    },
+    {
+      "original": "vendor-notices/once_cell-1.21.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/once_cell-1.21.4/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/once_cell-1.21.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/once_cell-1.21.4/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/owned_ttf_parser-0.25.1/LICENSE",
+      "stored": "项目文档/vendor-notices/owned_ttf_parser-0.25.1/LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "original": "vendor-notices/parking_lot-0.12.5/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/parking_lot-0.12.5/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/parking_lot-0.12.5/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/parking_lot-0.12.5/LICENSE-MIT",
+      "sha256": "c9a75f18b9ab2927829a208fc6aa2cf4e63b8420887ba29cdb265d6619ae82d5"
+    },
+    {
+      "original": "vendor-notices/parking_lot_core-0.9.12/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/parking_lot_core-0.9.12/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/parking_lot_core-0.9.12/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/parking_lot_core-0.9.12/LICENSE-MIT",
+      "sha256": "c9a75f18b9ab2927829a208fc6aa2cf4e63b8420887ba29cdb265d6619ae82d5"
+    },
+    {
+      "original": "vendor-notices/paste-1.0.15/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/paste-1.0.15/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/paste-1.0.15/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/paste-1.0.15/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/percent-encoding-2.3.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/percent-encoding-2.3.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/percent-encoding-2.3.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/percent-encoding-2.3.2/LICENSE-MIT",
+      "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+    },
+    {
+      "original": "vendor-notices/pin-project-lite-0.2.17/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/pin-project-lite-0.2.17/LICENSE-APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "original": "vendor-notices/pin-project-lite-0.2.17/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/pin-project-lite-0.2.17/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/pkg-config-0.3.34/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/pkg-config-0.3.34/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/pkg-config-0.3.34/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/pkg-config-0.3.34/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "original": "vendor-notices/png-0.18.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/png-0.18.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/png-0.18.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/png-0.18.1/LICENSE-MIT",
+      "sha256": "eaf40297c75da471f7cda1f3458e8d91b4b2ec866e609527a13acfa93b638652"
+    },
+    {
+      "original": "vendor-notices/potential_utf-0.1.6/LICENSE",
+      "stored": "项目文档/vendor-notices/potential_utf-0.1.6/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/proc-macro2-1.0.107/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/proc-macro2-1.0.107/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/proc-macro2-1.0.107/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/proc-macro2-1.0.107/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/profiling-1.0.18/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/profiling-1.0.18/LICENSE-APACHE",
+      "sha256": "10d30a673cd5e9349bdc02aeb48f14b3386d27d0da32df8f0a555d4aa16aa551"
+    },
+    {
+      "original": "vendor-notices/profiling-1.0.18/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/profiling-1.0.18/LICENSE-MIT",
+      "sha256": "c8167fdeeed46d3f244d3f85c5bf998ce889343691c32be2c61a8bc4b5c08333"
+    },
+    {
+      "original": "vendor-notices/pxfm-0.1.30/LICENSE-APACHE.md",
+      "stored": "项目文档/vendor-notices/pxfm-0.1.30/LICENSE-APACHE.md",
+      "sha256": "90bf2d659c43045111b65c733ab2a6d4cbcb422a098368c8c58a9ba3db4ed0c5"
+    },
+    {
+      "original": "vendor-notices/pxfm-0.1.30/LICENSE.md",
+      "stored": "项目文档/vendor-notices/pxfm-0.1.30/LICENSE.md",
+      "sha256": "2aa92cada6431e75615e3fe6cb1a9082c98f777d48ae1c087c0da0e37f7b8bff"
+    },
+    {
+      "original": "vendor-notices/quote-1.0.47/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/quote-1.0.47/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/quote-1.0.47/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/quote-1.0.47/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/raw-window-handle-0.6.2/LICENSE-APACHE.md",
+      "stored": "项目文档/vendor-notices/raw-window-handle-0.6.2/LICENSE-APACHE.md",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "original": "vendor-notices/raw-window-handle-0.6.2/LICENSE-MIT.md",
+      "stored": "项目文档/vendor-notices/raw-window-handle-0.6.2/LICENSE-MIT.md",
+      "sha256": "9c5a80639a57c1c945570e7ebbca0706305849ce3c098021325cca9db2f7acc4"
+    },
+    {
+      "original": "vendor-notices/raw-window-handle-0.6.2/LICENSE-ZLIB.md",
+      "stored": "项目文档/vendor-notices/raw-window-handle-0.6.2/LICENSE-ZLIB.md",
+      "sha256": "ae895c8576e682f310fb70d93d9f99b1dd82872094c54a8f6cdfe2ca5c2d6ecb"
+    },
+    {
+      "original": "vendor-notices/renderdoc-sys-1.1.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/renderdoc-sys-1.1.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/renderdoc-sys-1.1.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/renderdoc-sys-1.1.0/LICENSE-MIT",
+      "sha256": "24b2f2eff5a7622e87162823e260f00c6dfbce0e26d585d3d28c785f1edc80ed"
+    },
+    {
+      "original": "vendor-notices/rfd-0.15.4/LICENSE",
+      "stored": "项目文档/vendor-notices/rfd-0.15.4/LICENSE",
+      "sha256": "65fc947f4bac882a2cd104ef73c246b1b037059df9f2b3a58b7f77f0b9e56071"
+    },
+    {
+      "original": "vendor-notices/rustc-hash-1.1.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/rustc-hash-1.1.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/rustc-hash-1.1.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/rustc-hash-1.1.0/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/rustc-hash-2.1.3/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/rustc-hash-2.1.3/LICENSE-APACHE",
+      "sha256": "95bd3988beee069fa2848f648dab43cc6e0b2add2ad6bcb17360caf749802bcc"
+    },
+    {
+      "original": "vendor-notices/rustc-hash-2.1.3/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/rustc-hash-2.1.3/LICENSE-MIT",
+      "sha256": "30fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652"
+    },
+    {
+      "original": "vendor-notices/scopeguard-1.2.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/scopeguard-1.2.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/scopeguard-1.2.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/scopeguard-1.2.0/LICENSE-MIT",
+      "sha256": "fb77f0a9c53e473abe5103c8632ef9f0f2874d4fb3f17cb2d8c661aab9cee9d7"
+    },
+    {
+      "original": "vendor-notices/serde-1.0.229/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/serde-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/serde-1.0.229/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/serde-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/serde_core-1.0.229/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/serde_core-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/serde_core-1.0.229/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/serde_core-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/serde_derive-1.0.229/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/serde_derive-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/serde_derive-1.0.229/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/serde_derive-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/serde_json-1.0.151/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/serde_json-1.0.151/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/serde_json-1.0.151/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/serde_json-1.0.151/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/simd-adler32-0.3.10/LICENSE.md",
+      "stored": "项目文档/vendor-notices/simd-adler32-0.3.10/LICENSE.md",
+      "sha256": "42a35170233e83e18856792e748de4c1ce4a63b2afce9a370c89ef3fe23f9f2d"
+    },
+    {
+      "original": "vendor-notices/smallvec-1.16.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/smallvec-1.16.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/smallvec-1.16.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/smallvec-1.16.2/LICENSE-MIT",
+      "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+    },
+    {
+      "original": "vendor-notices/smol_str-0.2.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/smol_str-0.2.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/smol_str-0.2.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/smol_str-0.2.2/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/spirv-0.3.0+sdk-1.3.268.0/LICENSE",
+      "stored": "项目文档/vendor-notices/spirv-0.3.0+sdk-1.3.268.0/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "original": "vendor-notices/stable_deref_trait-1.2.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/stable_deref_trait-1.2.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/stable_deref_trait-1.2.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/stable_deref_trait-1.2.1/LICENSE-MIT",
+      "sha256": "5e05b024f653a5ce199e77cbbbd42fb5553562ec714b819421ed0c3e552a75d7"
+    },
+    {
+      "original": "vendor-notices/static_assertions-1.1.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/static_assertions-1.1.0/LICENSE-APACHE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "original": "vendor-notices/static_assertions-1.1.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/static_assertions-1.1.0/LICENSE-MIT",
+      "sha256": "ea084a2373ebc1f0902c09266e7bf25a05ab3814c1805bb017ffa7308f90c061"
+    },
+    {
+      "original": "vendor-notices/strsim-0.11.1/LICENSE",
+      "stored": "项目文档/vendor-notices/strsim-0.11.1/LICENSE",
+      "sha256": "1e697ce8d21401fbf1bddd9b5c3fd4c4c79ae1e3bdf51f81761c85e11d5a89cd"
+    },
+    {
+      "original": "vendor-notices/syn-2.0.119/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/syn-2.0.119/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/syn-2.0.119/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/syn-2.0.119/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/syn-3.0.6/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/syn-3.0.6/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/syn-3.0.6/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/syn-3.0.6/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/synstructure-0.14.0/LICENSE",
+      "stored": "项目文档/vendor-notices/synstructure-0.14.0/LICENSE",
+      "sha256": "219920e865eee70b7dcfc948a86b099e7f4fe2de01bcca2ca9a20c0a033f2b59"
+    },
+    {
+      "original": "vendor-notices/termcolor-1.4.1/COPYING",
+      "stored": "项目文档/vendor-notices/termcolor-1.4.1/COPYING",
+      "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+    },
+    {
+      "original": "vendor-notices/termcolor-1.4.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/termcolor-1.4.1/LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    {
+      "original": "vendor-notices/termcolor-1.4.1/UNLICENSE",
+      "stored": "项目文档/vendor-notices/termcolor-1.4.1/UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "original": "vendor-notices/thiserror-1.0.69/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/thiserror-1.0.69/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/thiserror-1.0.69/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/thiserror-1.0.69/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/thiserror-2.0.21/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/thiserror-2.0.21/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/thiserror-2.0.21/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/thiserror-2.0.21/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/thiserror-impl-1.0.69/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/thiserror-impl-1.0.69/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/thiserror-impl-1.0.69/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/thiserror-impl-1.0.69/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/thiserror-impl-2.0.21/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/thiserror-impl-2.0.21/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/thiserror-impl-2.0.21/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/thiserror-impl-2.0.21/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/tinystr-0.8.4/LICENSE",
+      "stored": "项目文档/vendor-notices/tinystr-0.8.4/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/tracing-0.1.44/LICENSE",
+      "stored": "项目文档/vendor-notices/tracing-0.1.44/LICENSE",
+      "sha256": "898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1"
+    },
+    {
+      "original": "vendor-notices/tracing-attributes-0.1.31/LICENSE",
+      "stored": "项目文档/vendor-notices/tracing-attributes-0.1.31/LICENSE",
+      "sha256": "898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1"
+    },
+    {
+      "original": "vendor-notices/tracing-core-0.1.36/LICENSE",
+      "stored": "项目文档/vendor-notices/tracing-core-0.1.36/LICENSE",
+      "sha256": "898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1"
+    },
+    {
+      "original": "vendor-notices/tracing-core-0.1.36/src/spin/LICENSE",
+      "stored": "项目文档/vendor-notices/tracing-core-0.1.36/src/spin/LICENSE",
+      "sha256": "58545fed1565e42d687aecec6897d35c6d37ccb71479a137c0deb2203e125c79"
+    },
+    {
+      "original": "vendor-notices/ttf-parser-0.25.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/ttf-parser-0.25.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/ttf-parser-0.25.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/ttf-parser-0.25.1/LICENSE-MIT",
+      "sha256": "f3c9fe731c701ed77fd5fbaac573872af04dc5869385eb9bd5e3c73c42713814"
+    },
+    {
+      "original": "vendor-notices/ttf-parser-0.25.1/tests/fonts/colr_1_LICENSE",
+      "stored": "项目文档/vendor-notices/ttf-parser-0.25.1/tests/fonts/colr_1_LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "original": "vendor-notices/type-map-0.5.1/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/type-map-0.5.1/LICENSE-APACHE",
+      "sha256": "f70ebc7cddd5befd46ce2aa9a8782deb7b59ac9fd55e8c0e10647d1ac66cecd1"
+    },
+    {
+      "original": "vendor-notices/type-map-0.5.1/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/type-map-0.5.1/LICENSE-MIT",
+      "sha256": "b47fb719a40d9ef9c8e3be525c41ce129c46d613cfc96a91bddd7c19dcebf7a1"
+    },
+    {
+      "original": "vendor-notices/unicode-ident-1.0.26/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/unicode-ident-1.0.26/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/unicode-ident-1.0.26/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/unicode-ident-1.0.26/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/unicode-ident-1.0.26/LICENSE-UNICODE",
+      "stored": "项目文档/vendor-notices/unicode-ident-1.0.26/LICENSE-UNICODE",
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    {
+      "original": "vendor-notices/unicode-width-0.1.14/COPYRIGHT",
+      "stored": "项目文档/vendor-notices/unicode-width-0.1.14/COPYRIGHT",
+      "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+    },
+    {
+      "original": "vendor-notices/unicode-width-0.1.14/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/unicode-width-0.1.14/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/unicode-width-0.1.14/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/unicode-width-0.1.14/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    {
+      "original": "vendor-notices/unicode-xid-0.2.6/COPYRIGHT",
+      "stored": "项目文档/vendor-notices/unicode-xid-0.2.6/COPYRIGHT",
+      "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+    },
+    {
+      "original": "vendor-notices/unicode-xid-0.2.6/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/unicode-xid-0.2.6/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/unicode-xid-0.2.6/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/unicode-xid-0.2.6/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    {
+      "original": "vendor-notices/url-2.5.8/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/url-2.5.8/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/url-2.5.8/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/url-2.5.8/LICENSE-MIT",
+      "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+    },
+    {
+      "original": "vendor-notices/utf8_iter-1.0.4/COPYRIGHT",
+      "stored": "项目文档/vendor-notices/utf8_iter-1.0.4/COPYRIGHT",
+      "sha256": "c30152c94a6d75e021adbc52b3a52470366a46edb917e17deae3259251af244c"
+    },
+    {
+      "original": "vendor-notices/utf8_iter-1.0.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/utf8_iter-1.0.4/LICENSE-APACHE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "original": "vendor-notices/utf8_iter-1.0.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/utf8_iter-1.0.4/LICENSE-MIT",
+      "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+    },
+    {
+      "original": "vendor-notices/utf8parse-0.2.2/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/utf8parse-0.2.2/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "original": "vendor-notices/utf8parse-0.2.2/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/utf8parse-0.2.2/LICENSE-MIT",
+      "sha256": "e4c9b06fa850cb9b540a5e400e9f6394cf15efcf4098144de477d1d3dae10150"
+    },
+    {
+      "original": "vendor-notices/version_check-0.9.5/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/version_check-0.9.5/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "original": "vendor-notices/version_check-0.9.5/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/version_check-0.9.5/LICENSE-MIT",
+      "sha256": "b7e650f3fce5c53249d1cdc608b54df156a97edd636cf9d23498d0cfe7aec63e"
+    },
+    {
+      "original": "vendor-notices/web-time-1.1.0/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/web-time-1.1.0/LICENSE-APACHE",
+      "sha256": "54a744942eb3fa63a74d8d359989ed6962c04f3f10ff20cfa08ff8aa7efbe4e6"
+    },
+    {
+      "original": "vendor-notices/web-time-1.1.0/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/web-time-1.1.0/LICENSE-MIT",
+      "sha256": "f428305bbf2e70fbd807af0f3c7ac1b7acfb95311640f451e9d2e48db6d7e96b"
+    },
+    {
+      "original": "vendor-notices/webbrowser-1.2.4/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/webbrowser-1.2.4/LICENSE-APACHE",
+      "sha256": "b0f7d40eaa9577d99132579866bf1eaf448577dc737582b8a34f1b3e7fab8994"
+    },
+    {
+      "original": "vendor-notices/webbrowser-1.2.4/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/webbrowser-1.2.4/LICENSE-MIT",
+      "sha256": "7f0f4f8802c102d35110806d1755b7681127575b644f64750810cc47fa78df5b"
+    },
+    {
+      "original": "vendor-notices/wgpu-22.1.0/LICENSE.APACHE",
+      "stored": "项目文档/vendor-notices/wgpu-22.1.0/LICENSE.APACHE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "original": "vendor-notices/wgpu-22.1.0/LICENSE.MIT",
+      "stored": "项目文档/vendor-notices/wgpu-22.1.0/LICENSE.MIT",
+      "sha256": "c7fea58d1cfe49634cd92e54fc10a9d871f4b275321a4cd8c09e449122caaeb4"
+    },
+    {
+      "original": "vendor-notices/wgpu-core-22.1.0/LICENSE.APACHE",
+      "stored": "项目文档/vendor-notices/wgpu-core-22.1.0/LICENSE.APACHE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "original": "vendor-notices/wgpu-core-22.1.0/LICENSE.MIT",
+      "stored": "项目文档/vendor-notices/wgpu-core-22.1.0/LICENSE.MIT",
+      "sha256": "c7fea58d1cfe49634cd92e54fc10a9d871f4b275321a4cd8c09e449122caaeb4"
+    },
+    {
+      "original": "vendor-notices/wgpu-hal-22.0.0/LICENSE.APACHE",
+      "stored": "项目文档/vendor-notices/wgpu-hal-22.0.0/LICENSE.APACHE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "original": "vendor-notices/wgpu-hal-22.0.0/LICENSE.MIT",
+      "stored": "项目文档/vendor-notices/wgpu-hal-22.0.0/LICENSE.MIT",
+      "sha256": "c7fea58d1cfe49634cd92e54fc10a9d871f4b275321a4cd8c09e449122caaeb4"
+    },
+    {
+      "original": "vendor-notices/wgpu-types-22.0.0/LICENSE.APACHE",
+      "stored": "项目文档/vendor-notices/wgpu-types-22.0.0/LICENSE.APACHE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "original": "vendor-notices/wgpu-types-22.0.0/LICENSE.MIT",
+      "stored": "项目文档/vendor-notices/wgpu-types-22.0.0/LICENSE.MIT",
+      "sha256": "c7fea58d1cfe49634cd92e54fc10a9d871f4b275321a4cd8c09e449122caaeb4"
+    },
+    {
+      "original": "vendor-notices/winit-0.30.13/LICENSE",
+      "stored": "项目文档/vendor-notices/winit-0.30.13/LICENSE",
+      "sha256": "6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a"
+    },
+    {
+      "original": "vendor-notices/writeable-0.6.4/LICENSE",
+      "stored": "项目文档/vendor-notices/writeable-0.6.4/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/yoke-0.8.3/LICENSE",
+      "stored": "项目文档/vendor-notices/yoke-0.8.3/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/yoke-derive-0.8.4/LICENSE",
+      "stored": "项目文档/vendor-notices/yoke-derive-0.8.4/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/zerocopy-0.8.59/LICENSE-APACHE",
+      "stored": "项目文档/vendor-notices/zerocopy-0.8.59/LICENSE-APACHE",
+      "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+    },
+    {
+      "original": "vendor-notices/zerocopy-0.8.59/LICENSE-BSD",
+      "stored": "项目文档/vendor-notices/zerocopy-0.8.59/LICENSE-BSD",
+      "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+    },
+    {
+      "original": "vendor-notices/zerocopy-0.8.59/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/zerocopy-0.8.59/LICENSE-MIT",
+      "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+    },
+    {
+      "original": "vendor-notices/zerofrom-0.1.8/LICENSE",
+      "stored": "项目文档/vendor-notices/zerofrom-0.1.8/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/zerofrom-derive-0.1.8/LICENSE",
+      "stored": "项目文档/vendor-notices/zerofrom-derive-0.1.8/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/zerotrie-0.2.5/LICENSE",
+      "stored": "项目文档/vendor-notices/zerotrie-0.2.5/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/zerovec-0.11.8/LICENSE",
+      "stored": "项目文档/vendor-notices/zerovec-0.11.8/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/zerovec-derive-0.11.6/LICENSE",
+      "stored": "项目文档/vendor-notices/zerovec-derive-0.11.6/LICENSE",
+      "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+    },
+    {
+      "original": "vendor-notices/zip-2.4.2/LICENSE",
+      "stored": "项目文档/vendor-notices/zip-2.4.2/LICENSE",
+      "sha256": "04dc52136d82400b11df5f474949863a70a5d05d2278dec45b99c479494450a6"
+    },
+    {
+      "original": "vendor-notices/zlib-rs-0.6.8/LICENSE",
+      "stored": "项目文档/vendor-notices/zlib-rs-0.6.8/LICENSE",
+      "sha256": "e72111c52b7d96ebe25348dee19f0744f444d3c95ae6b1ecb6ccaecc5bce05ba"
+    },
+    {
+      "original": "vendor-notices/zmij-1.0.23/LICENSE-MIT",
+      "stored": "项目文档/vendor-notices/zmij-1.0.23/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "original": "vendor-notices/zopfli-0.8.3/COPYING",
+      "stored": "项目文档/vendor-notices/zopfli-0.8.3/COPYING",
+      "sha256": "018b1cb87efdf7a04c2fcc13d57ed63f62149113fb207b27ea13430d64f13513"
+    }
+  ],
+  "platform_entries": [],
+  "cargo_manifest": "workspace/Cargo.toml"
+}
