@@ -1854,6 +1854,11 @@
       "original": "vendor-notices/zopfli-0.8.3/COPYING",
       "stored": "项目文档/vendor-notices/zopfli-0.8.3/COPYING",
       "sha256": "018b1cb87efdf7a04c2fcc13d57ed63f62149113fb207b27ea13430d64f13513"
+    },
+    {
+      "original": "THIRD_PARTY_NOTICES.json",
+      "stored": "项目文档/THIRD_PARTY_NOTICES.json",
+      "sha256": "91063ed9668857b08c0952a4e4048f57484b1db0ec988d600c70f88c3e3269ab"
     }
   ],
   "platform_entries": [],

@@ -30,11 +30,6 @@
       "bytes": 977045,
       "mode": "0o644"
     },
-    "THIRD_PARTY_NOTICES.json": {
-      "sha256": "91063ed9668857b08c0952a4e4048f57484b1db0ec988d600c70f88c3e3269ab",
-      "bytes": 115949,
-      "mode": "0o644"
-    },
     "bench/lens_capstone_review.py": {
       "sha256": "8755d56e1560fc832207cdfe599ecd20bb615d245449b9a5403acd8d753dea1b",
       "bytes": 6554,
@@ -261,8 +256,8 @@
       "mode": "0o644"
     },
     "构建配置.json": {
-      "sha256": "c19580c094691ca9f4cbd5ded5486a3354cdf4a31b3aab57c8c1fcbe4b45c202",
-      "bytes": 88190,
+      "sha256": "2f5179161073991599d6422abf72860f60768f8fe8759961b55b44c602456bcd",
+      "bytes": 88389,
       "mode": "0o644"
     },
     "项目文档/AGENTS.md": {
@@ -298,6 +293,11 @@
     "项目文档/SECURITY.md": {
       "sha256": "d2aa5e3960ca3dbb16007e27d4ec49f4be6c4cec2933a12dc550e3605366a1a5",
       "bytes": 1225,
+      "mode": "0o644"
+    },
+    "项目文档/THIRD_PARTY_NOTICES.json": {
+      "sha256": "91063ed9668857b08c0952a4e4048f57484b1db0ec988d600c70f88c3e3269ab",
+      "bytes": 115949,
       "mode": "0o644"
     },
     "项目文档/UPSTREAM_GUIDE.md": {
