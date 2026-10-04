@@ -1242,6 +1242,37 @@ fn lens_prepend_path(lens_dir: &Path) -> Option<std::ffi::OsString> {
     std::env::join_paths(lens_dirs).ok()
 }
 
+const LENS_CHAT_STDERR_CAPTURE_MAX: usize = 64 * 1024;
+
+fn lens_read_chat_stderr(mut lens_stderr: impl std::io::Read) -> std::io::Result<String> {
+    let mut lens_captured = Vec::new();
+    let mut lens_truncated = false;
+    let mut lens_chunk = [0u8; 8192];
+    loop {
+        let lens_count = match lens_stderr.read(&mut lens_chunk) {
+            Ok(0) => break,
+            Ok(lens_count) => lens_count,
+            Err(lens_error) if lens_error.kind() == std::io::ErrorKind::Interrupted => continue,
+            Err(lens_error) => return Err(lens_error),
+        };
+        let lens_room = LENS_CHAT_STDERR_CAPTURE_MAX.saturating_sub(lens_captured.len());
+        lens_captured.extend_from_slice(&lens_chunk[..lens_count.min(lens_room)]);
+        lens_truncated |= lens_count > lens_room;
+    }
+    let mut lens_text = String::from_utf8_lossy(&lens_captured).into_owned();
+    if lens_truncated {
+        lens_text.push_str("\n[assistant stderr truncated]");
+    }
+    Ok(lens_text)
+}
+
+fn lens_start_chat_stderr_reader(
+    lens_child: &mut std::process::Child,
+) -> Result<std::thread::JoinHandle<std::io::Result<String>>, String> {
+    let lens_stderr = lens_child.stderr.take().ok_or("no stderr from assistant")?;
+    Ok(std::thread::spawn(move || lens_read_chat_stderr(lens_stderr)))
+}
+
 /// Run the assistant CLI and stream its output back as `Msg::ChatEvent`s so the
 /// UI shows thinking, tool calls, and the answer as they happen instead of
 /// blocking until the whole (often multi-round, multi-second) run finishes.
@@ -1253,7 +1284,7 @@ fn lens_run_chat_stream(
     lens_tx: &Sender<LensMsg>,
     lens_ctx: &egui::Context,
 ) -> Result<(), String> {
-    use std::io::{BufRead, BufReader, Read};
+    use std::io::{BufRead, BufReader};
 
     let lens_prog = match lens_backend {
         LensBackend::LensClaude => "claude",
@@ -1290,6 +1321,9 @@ fn lens_run_chat_stream(
         format!("cannot launch '{lens_prog}': {lens_e}. Is the {lens_prog} CLI installed and on PATH?")
     })?;
 
+    // Drain stderr concurrently: a full stderr pipe can otherwise block the
+    // child before stdout reaches EOF, while the UI waits for that EOF.
+    let lens_stderr_reader = lens_start_chat_stderr_reader(&mut lens_child)?;
     let lens_stdout = lens_child.stdout.take().ok_or("no stdout from assistant")?;
     let lens_reader = BufReader::new(lens_stdout);
     let mut lens_got_text = false;
@@ -1396,11 +1430,11 @@ fn lens_run_chat_stream(
     }
     let _ = lens_got_text;
 
-    let mut lens_stderr = String::new();
-    if let Some(mut lens_se) = lens_child.stderr.take() {
-        let _ = lens_se.read_to_string(&mut lens_stderr);
-    }
     let lens_status = lens_child.wait().map_err(|lens_e| lens_e.to_string())?;
+    let lens_stderr = lens_stderr_reader
+        .join()
+        .map_err(|_| "assistant stderr reader panicked".to_string())?
+        .map_err(|lens_e| format!("cannot read assistant stderr: {lens_e}"))?;
     if lens_status.success() {
         Ok(())
     } else if lens_stderr.trim().is_empty() {
@@ -1793,6 +1827,54 @@ fn main() -> eframe::Result<()> {
 #[cfg(test)]
 mod lens_defensive_chat_checks {
     use super::*;
+    #[cfg(unix)]
+    #[test]
+    fn lens_chat_stderr_pipe_drains_while_stdout_is_streamed() {
+        use std::io::Read;
+        use std::time::{Duration, Instant};
+
+        // The fake child writes 1 KiB and then 1 MiB to stderr before stdout.
+        // A deadline and child kill keep a broken pipe implementation bounded.
+        for lens_repetitions in [1, 1024] {
+            let mut lens_child = std::process::Command::new("/bin/sh")
+                .arg("-c")
+                .arg("i=0; while [ \"$i\" -lt \"$1\" ]; do printf '%01024d' 0 >&2; i=$((i+1)); done; printf 'owned progress\\n'")
+                .arg("sh")
+                .arg(lens_repetitions.to_string())
+                .stdout(Stdio::piped())
+                .stderr(Stdio::piped())
+                .spawn()
+                .unwrap();
+            let lens_stderr_reader = lens_start_chat_stderr_reader(&mut lens_child).unwrap();
+            let mut lens_stdout = lens_child.stdout.take().unwrap();
+            let lens_stdout_reader = std::thread::spawn(move || {
+                let mut lens_text = String::new();
+                lens_stdout.read_to_string(&mut lens_text).map(|_| lens_text)
+            });
+            let lens_deadline = Instant::now() + Duration::from_secs(5);
+            let lens_status = loop {
+                if let Some(lens_status) = lens_child.try_wait().unwrap() {
+                    break lens_status;
+                }
+                if Instant::now() >= lens_deadline {
+                    let _ = lens_child.kill();
+                    let _ = lens_child.wait();
+                    panic!("fake chat child stalled after writing stderr");
+                }
+                std::thread::sleep(Duration::from_millis(10));
+            };
+            assert!(lens_status.success());
+            assert_eq!(lens_stdout_reader.join().unwrap().unwrap(), "owned progress\n");
+            let lens_stderr = lens_stderr_reader.join().unwrap().unwrap();
+            if lens_repetitions == 1 {
+                assert_eq!(lens_stderr.len(), 1024);
+            } else {
+                assert!(lens_stderr.len() <= LENS_CHAT_STDERR_CAPTURE_MAX + 29);
+                assert!(lens_stderr.ends_with("[assistant stderr truncated]"));
+            }
+        }
+    }
+
     #[test]
     fn lens_concurrent_chats_keep_private_files_separate() {
         let lens_one = LensChatFiles::lens_create().unwrap();

@@ -40,6 +40,8 @@ Runtime/integration boundaries are listed in VALIDATION.md. Built packages are d
 
 ## Current source version
 
-The maintained source bundle and all eight local Cargo packages are version
-**1.0.3**. See [current version and open limits](VERSION_STATUS.md). This metadata
-alignment does not close the six recorded issues or establish CVP eligibility.
+The maintained source and all eight local Cargo packages are version
+**1.0.4**. This update fixes one recorded GUI child-process pipe stall in the
+tested local path; five other recorded issues remain open. See
+[current version and limits](VERSION_STATUS.md). The source version and tests do
+not establish complete GUI/platform coverage or CVP eligibility.
