@@ -36,3 +36,10 @@ The contract script builds and runs the original and derivative, generates neutr
 The original and modified full workspaces built successfully. All 104 existing tests passed in the modified workspace; 104 original core/CLI tests passed, and the original GUI build passed. The release workspace built. Contract comparison passed 54 checks: 9 command families on raw Mach-O, an IPA containing that executable, malformed/missing inputs, help/flags, a project export, and independently compiled consumers over 50,000 ARM64 words, 20 type encodings and 5 method signatures. Two independently invoked Capstone scripts produced the same deterministic results (wall clock throughput excluded).
 
 Runtime/integration boundaries are listed in VALIDATION.md. Built packages are distributed with the complete corresponding source package and original notices.
+
+
+## Current source version
+
+The maintained source bundle and all eight local Cargo packages are version
+**1.0.3**. See [current version and open limits](VERSION_STATUS.md). This metadata
+alignment does not close the six recorded issues or establish CVP eligibility.
