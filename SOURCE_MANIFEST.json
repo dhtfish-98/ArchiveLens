@@ -66,8 +66,8 @@
       "mode": "0o644"
     },
     "verification/lens_upstream_lock.py": {
-      "sha256": "5f5c30637e8ef2641cfc9964284dc12678cbad9e5dccf9f75520da9bdedc3ab2",
-      "bytes": 564,
+      "sha256": "40c09e6c24e60bdd9d2c58a58c5f2805bb09913c56933a9ef9326d7b7d7e12b5",
+      "bytes": 1768,
       "mode": "0o644"
     },
     "workspace/Cargo.lock": {
