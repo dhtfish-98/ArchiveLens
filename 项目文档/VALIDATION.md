@@ -1,5 +1,9 @@
 # Validation evidence
 
+## 1.0.5 document-layout validation — 2026-10-05
+
+Two historical upstream guide images moved byte-for-byte from root `resources/` to `项目文档/resources/`. The retained `UPSTREAM_GUIDE.md` image link now resolves relative to that document. `RENAME_MAP.json` and `SOURCE_MANIFEST.json` record the canonical tracked paths. Runtime Rust source, test source and original upstream/third-party notices remain unchanged. On this 1.0.5 candidate, the 424-file tracked source manifest and Build-only compatibility copy matched their SHA-256 records. With the official Rust 1.99.0 toolchain installed only in Build, the locked workspace suite passed 107/107 tests and the full workspace Release build passed. Exact-commit CI and source Release verification remain separate checks from this local result and from the historical 1.0.4 GUI result below.
+
 ## Historical rewrite comparison — PASS at its original handoff
 
 The original and modified full workspaces built successfully. All 104 existing tests passed in the modified workspace; 104 original core/CLI tests passed, and the original GUI build passed. The release workspace built. Contract comparison passed 54 checks: 9 command families on raw Mach-O, an IPA containing that executable, malformed/missing inputs, help/flags, a project export, and independently compiled consumers over 50,000 ARM64 words, 20 type encodings and 5 method signatures. Two independently invoked Capstone scripts produced the same deterministic results (wall clock throughput excluded).

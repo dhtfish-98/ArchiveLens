@@ -2,7 +2,7 @@
   "project": "ArchiveLens",
   "algorithm": "sha256",
   "scope": "Current tracked source snapshot plus VERSION_STATUS.md; excludes this self-describing manifest and untracked Build outputs. Runtime/source hashes are inventory evidence, not a complete behavior audit.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "previous_manifest_sha256": "5bf5110294766d7e54500f644b92ee9e9bb0b33e45bd9fad8b338ea93797f740",
   "files": {
     ".github/workflows/archive-tests.yml": {
@@ -26,8 +26,8 @@
       "mode": "0o644"
     },
     "RENAME_MAP.json": {
-      "sha256": "6616ed65d4231f82b8eb79751a0ecf87a469b434097bbeee6bd69948a34c198f",
-      "bytes": 977045,
+      "sha256": "b157de01e6377b3b967854444782c036c0bc28bd1a6a6d69aac8cc37f767626c",
+      "bytes": 977071,
       "mode": "0o644"
     },
     "bench/lens_capstone_review.py": {
@@ -45,16 +45,6 @@
       "bytes": 589,
       "mode": "0o644"
     },
-    "resources/image.png": {
-      "sha256": "c2e9f7a73513cdd8efa8c51e9cbea689930757342f7abfa519bf4e93459dfc79",
-      "bytes": 247801,
-      "mode": "0o644"
-    },
-    "resources/intro.gif": {
-      "sha256": "235efb267fe7b61c61db0a1c9e60633816eff0c35796b3013be29ecc2daf2134",
-      "bytes": 21816728,
-      "mode": "0o644"
-    },
     "verification/lens_contract.py": {
       "sha256": "ae953342025e3042d25dc22d48ee2449cea74fc2da55fa5858d97dc5d64cd9df",
       "bytes": 6472,
@@ -66,12 +56,12 @@
       "mode": "0o644"
     },
     "workspace/Cargo.lock": {
-      "sha256": "971a054664e578812bdc36f7e664e7792fead908ad18bf9f618c0697bc8b4c99",
+      "sha256": "2649f6cfe479166a056533121346e03948f1f748f2f1e947a1dbade8c5a506bd",
       "bytes": 116130,
       "mode": "0o644"
     },
     "workspace/Cargo.toml": {
-      "sha256": "36dabb5c1e1e4829afedd6a32b8136485028a077ab35f4a6128d061b1a25bc80",
+      "sha256": "2a51414ff419cd4ca3daba675d8be769b6d96d49c439893ebfef8b524c402543",
       "bytes": 603,
       "mode": "0o644"
     },
@@ -256,8 +246,8 @@
       "mode": "0o644"
     },
     "构建配置.json": {
-      "sha256": "990d68cd71e4ddbb5f68376a58a2a4d8c36ec5a2f1e23a26ee7e4f3289b66f38",
-      "bytes": 88389,
+      "sha256": "767c390492c719efb978788bebc9f9382c057070f83b8e2fb4f2c24d6efb877d",
+      "bytes": 88767,
       "mode": "0o644"
     },
     "项目文档/AGENTS.md": {
@@ -286,8 +276,8 @@
       "mode": "0o644"
     },
     "项目文档/README.md": {
-      "sha256": "3ae185548739d91f90dc8e3ac6e258031da2a7298721747b4b6b5486f82536f6",
-      "bytes": 3322,
+      "sha256": "54b044250438948957ed6f94d1172bc8fdea966e1b8c808d636f7bf3f26e501e",
+      "bytes": 3437,
       "mode": "0o644"
     },
     "项目文档/SECURITY.md": {
@@ -306,18 +296,28 @@
       "mode": "0o644"
     },
     "项目文档/VALIDATION.md": {
-      "sha256": "3331c954f38f1d49f81258b9cc50ca51ad8364abb88d5ea55030a4bc91c44acc",
-      "bytes": 4284,
+      "sha256": "3c9276473732367da08301f529326212dceda670528380f87de914672945f1b5",
+      "bytes": 5132,
       "mode": "0o644"
     },
     "项目文档/VERSION_STATUS.md": {
-      "sha256": "130de9a7f9f43db926ffd49beea3cb04804e80c9ff80d6fe228352d665a482c8",
-      "bytes": 2171,
+      "sha256": "b446e2fe7f7017f340eb4ee655057a600ae50dc34b4d4a2258968dd4cb7057de",
+      "bytes": 2307,
       "mode": "0o644"
     },
     "项目文档/bench/REPORT.md": {
       "sha256": "7325c9b49647d4db3b92803109e753b26aa56b1c407a2bca4185c52a86ac12c2",
       "bytes": 7505,
+      "mode": "0o644"
+    },
+    "项目文档/resources/image.png": {
+      "sha256": "c2e9f7a73513cdd8efa8c51e9cbea689930757342f7abfa519bf4e93459dfc79",
+      "bytes": 247801,
+      "mode": "0o644"
+    },
+    "项目文档/resources/intro.gif": {
+      "sha256": "235efb267fe7b61c61db0a1c9e60633816eff0c35796b3013be29ecc2daf2134",
+      "bytes": 21816728,
       "mode": "0o644"
     },
     "项目文档/vendor-notices/ab_glyph-0.2.32/LICENSE": {

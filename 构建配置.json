@@ -33,7 +33,7 @@
     {
       "original": "README.md",
       "stored": "项目文档/README.md",
-      "sha256": "3ae185548739d91f90dc8e3ac6e258031da2a7298721747b4b6b5486f82536f6"
+      "sha256": "54b044250438948957ed6f94d1172bc8fdea966e1b8c808d636f7bf3f26e501e"
     },
     {
       "original": "SECURITY.md",
@@ -46,9 +46,19 @@
       "sha256": "a8fb82bca40d4d0e6409a97117517479a0b97acc10a344a763e7ed2a43bc5385"
     },
     {
+      "original": "resources/intro.gif",
+      "stored": "项目文档/resources/intro.gif",
+      "sha256": "235efb267fe7b61c61db0a1c9e60633816eff0c35796b3013be29ecc2daf2134"
+    },
+    {
+      "original": "resources/image.png",
+      "stored": "项目文档/resources/image.png",
+      "sha256": "c2e9f7a73513cdd8efa8c51e9cbea689930757342f7abfa519bf4e93459dfc79"
+    },
+    {
       "original": "VALIDATION.md",
       "stored": "项目文档/VALIDATION.md",
-      "sha256": "3331c954f38f1d49f81258b9cc50ca51ad8364abb88d5ea55030a4bc91c44acc"
+      "sha256": "3c9276473732367da08301f529326212dceda670528380f87de914672945f1b5"
     },
     {
       "original": "bench/REPORT.md",
