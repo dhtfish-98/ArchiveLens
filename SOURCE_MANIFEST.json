@@ -2,8 +2,8 @@
   "project": "ArchiveLens",
   "algorithm": "sha256",
   "scope": "Current tracked source snapshot plus VERSION_STATUS.md; excludes this self-describing manifest and untracked Build outputs. Runtime/source hashes are inventory evidence, not a complete behavior audit.",
-  "version": "1.0.7",
-  "previous_manifest_sha256": "a3c58ca8070cd2ad88aae00670f380a3edde88bc0e1141fb892eba251d3b5080",
+  "version": "1.0.8",
+  "previous_manifest_sha256": "dc03abb63393c6ee66b7a8a1958a59e5b5dee286e567da09093e07e56299c919",
   "files": {
     ".github/workflows/archive-tests.yml": {
       "sha256": "d604f98890e3cb77b7e4a47a27840aeb07230dc55b0c0f0e2c910ed36f28efb2",
@@ -56,12 +56,12 @@
       "mode": "0o644"
     },
     "workspace/Cargo.lock": {
-      "sha256": "686239cc4ede383330714dd6828ba67658e9a084031b0f925f55e7f7f31bc157",
+      "sha256": "c80ca15c5e6c1633f1be54bda4862d928bf171be318793a51ae9534961c8a1fc",
       "bytes": 116130,
       "mode": "0o644"
     },
     "workspace/Cargo.toml": {
-      "sha256": "5ccd8c1ba1f0ad3c8ff7db1cadcd945579c9e31325e375136dc8f6e5971f36db",
+      "sha256": "4f830ea09db89063be6e34c29ef317cd250fbb6dc8699ede352e6c9c16a6cb90",
       "bytes": 603,
       "mode": "0o644"
     },
@@ -246,7 +246,7 @@
       "mode": "0o644"
     },
     "构建配置.json": {
-      "sha256": "795e08f783bd42dce345232f27a322d3092ed28257623968fad2e3d2b79d4c69",
+      "sha256": "8cd9a24fc440f3b2d8acbd8853f27080a26fdb2dfb0614c4208e16d15eb9d596",
       "bytes": 88767,
       "mode": "0o644"
     },
@@ -276,8 +276,8 @@
       "mode": "0o644"
     },
     "项目文档/README.md": {
-      "sha256": "8c7ea2b19a0ddbfb4dec9ba635880dc52b612ecef0575a31b5b8e5cfdf2d91c5",
-      "bytes": 3544,
+      "sha256": "e3fa7e4706b7e8e76a79156cd934930b1d2f18ecb7d9e8b99cce74242cf487d0",
+      "bytes": 3638,
       "mode": "0o644"
     },
     "项目文档/SECURITY.md": {
@@ -301,8 +301,8 @@
       "mode": "0o644"
     },
     "项目文档/VERSION_STATUS.md": {
-      "sha256": "830e063857b36a5c9ef430e976aa6e6756d3cd9665c8e136eb8d5f47efbff2ea",
-      "bytes": 3126,
+      "sha256": "4c18bbf3bf42aa8044291c5864df443a8b3afb4e62651d214ade24e3b6f90e60",
+      "bytes": 3390,
       "mode": "0o644"
     },
     "项目文档/bench/REPORT.md": {

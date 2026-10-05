@@ -239,7 +239,7 @@ dependencies = [
 
 [[package]]
 name = "archivelens"
-version = "1.0.7"
+version = "1.0.8"
 dependencies = [
  "clap",
  "lens-arm64",
@@ -1859,11 +1859,11 @@ checksum = "e2db585e1d738fc771bf08a151420d3ed193d9d895a36df7f6f8a9456b911ddc"
 
 [[package]]
 name = "lens-arm64"
-version = "1.0.7"
+version = "1.0.8"
 
 [[package]]
 name = "lens-bench"
-version = "1.0.7"
+version = "1.0.8"
 dependencies = [
  "lens-arm64",
  "lens-macho",
@@ -1872,7 +1872,7 @@ dependencies = [
 
 [[package]]
 name = "lens-gui"
-version = "1.0.7"
+version = "1.0.8"
 dependencies = [
  "eframe",
  "egui",
@@ -1885,21 +1885,21 @@ dependencies = [
 
 [[package]]
 name = "lens-image"
-version = "1.0.7"
+version = "1.0.8"
 dependencies = [
  "lens-macho",
 ]
 
 [[package]]
 name = "lens-macho"
-version = "1.0.7"
+version = "1.0.8"
 dependencies = [
  "thiserror 1.0.69",
 ]
 
 [[package]]
 name = "lens-objc"
-version = "1.0.7"
+version = "1.0.8"
 dependencies = [
  "lens-image",
  "lens-macho",
@@ -1907,7 +1907,7 @@ dependencies = [
 
 [[package]]
 name = "lens-swift"
-version = "1.0.7"
+version = "1.0.8"
 dependencies = [
  "lens-macho",
 ]

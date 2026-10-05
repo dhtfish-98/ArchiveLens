@@ -1,11 +1,16 @@
 # Current source version and limits
 
 The maintained source and the eight local Cargo workspace packages use version
-**1.0.7** together. Earlier source Releases remain historical versions;
+**1.0.8** together. Earlier source Releases remain historical versions;
 earlier v1.0.0 through v1.0.2 source Releases used the inherited Cargo value
 0.1.0. Local package versions identify this source bundle; they do not assert
 crate-registry publication, full API stability or platform coverage. Third-party
 package versions, original copyright and license notices are unchanged.
+
+Version 1.0.8 corrects GitHub commit and tag attribution and updates only
+project version metadata and this status record. Runtime Rust source and the
+upstream derivative rights are unchanged. The previous v1.0.7 Release remains
+available as a historical record.
 
 Version 1.0.7 corrects one cross-project template sentence in ORIGIN.md.
 It changes no runtime source; the five bounded runtime fixes remain the v1.0.6

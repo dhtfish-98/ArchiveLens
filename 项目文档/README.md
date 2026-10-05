@@ -41,10 +41,11 @@ Runtime/integration boundaries are listed in VALIDATION.md. Built packages are d
 ## Current source version
 
 The maintained source and all eight local Cargo packages are version
-**1.0.7**. Version 1.0.4 fixed one recorded GUI child-process pipe stall
+**1.0.8**. Version 1.0.4 fixed one recorded GUI child-process pipe stall
 in the tested local path. Version 1.0.5 moved two historical guide images
 under `项目文档/resources/` without changing runtime source. Version 1.0.6
 corrects five recorded parser and GUI extraction issues on tested inputs.
-Version 1.0.7 corrects a source attribution sentence only. See
+Version 1.0.7 corrects a source attribution sentence only. Version 1.0.8
+corrects the GitHub commit and tag attribution without changing runtime source. See
 [current version and limits](VERSION_STATUS.md). The source version and tests do
 not establish complete GUI/platform coverage or CVP eligibility.
