@@ -2,8 +2,8 @@
   "project": "ArchiveLens",
   "algorithm": "sha256",
   "scope": "Current tracked source snapshot plus VERSION_STATUS.md; excludes this self-describing manifest and untracked Build outputs. Runtime/source hashes are inventory evidence, not a complete behavior audit.",
-  "version": "1.0.5",
-  "previous_manifest_sha256": "5bf5110294766d7e54500f644b92ee9e9bb0b33e45bd9fad8b338ea93797f740",
+  "version": "1.0.6",
+  "previous_manifest_sha256": "ac6ae31948463470b161d48f08c3af519347459408ef29f45a67338425591e7e",
   "files": {
     ".github/workflows/archive-tests.yml": {
       "sha256": "d604f98890e3cb77b7e4a47a27840aeb07230dc55b0c0f0e2c910ed36f28efb2",
@@ -56,12 +56,12 @@
       "mode": "0o644"
     },
     "workspace/Cargo.lock": {
-      "sha256": "2649f6cfe479166a056533121346e03948f1f748f2f1e947a1dbade8c5a506bd",
+      "sha256": "f078a6231115a92526b69cfea4f937897378762d27dc45984ad2d985eccc4fbd",
       "bytes": 116130,
       "mode": "0o644"
     },
     "workspace/Cargo.toml": {
-      "sha256": "2a51414ff419cd4ca3daba675d8be769b6d96d49c439893ebfef8b524c402543",
+      "sha256": "dbc1b7bbeb876ef2e841a940c298b327569ca8ae93a5dcaa0d80ce9b8452aadc",
       "bytes": 603,
       "mode": "0o644"
     },
@@ -111,8 +111,8 @@
       "mode": "0o644"
     },
     "workspace/bin/lens-gui/src/lens_main.rs": {
-      "sha256": "fb5ff431a151d2d6552aba91c1d5c5d58d6caff9f2953a6860fbee2fd7b91340",
-      "bytes": 84162,
+      "sha256": "1670d4894931d9c9128835979742d842eab299ab72a1b5942d3ac9f4196cb07c",
+      "bytes": 88304,
       "mode": "0o644"
     },
     "workspace/crates/lens-arm64/Cargo.toml": {
@@ -166,13 +166,13 @@
       "mode": "0o644"
     },
     "workspace/crates/lens-macho/src/lens_header.rs": {
-      "sha256": "2db78a744eda5ebba56b604534404d9b2f0fd748d6b166ce422d8f2b9ed4172a",
-      "bytes": 6247,
+      "sha256": "1e0b05fbbc3731049dad6f5daff99d58abad0272434cd87bea47063ef5d5d350",
+      "bytes": 7088,
       "mode": "0o644"
     },
     "workspace/crates/lens-macho/src/lens_image.rs": {
-      "sha256": "1a89da61c9637f0cf62aaaaf8dc8e78e2fe7567044628fd92c5701efa109fcb9",
-      "bytes": 11742,
+      "sha256": "683d2488d73c4abc504e371727516895abf5f037ade4c02cf0bf55cbb1a47db9",
+      "bytes": 12342,
       "mode": "0o644"
     },
     "workspace/crates/lens-macho/src/lens_lib.rs": {
@@ -181,13 +181,13 @@
       "mode": "0o644"
     },
     "workspace/crates/lens-macho/src/lens_linkedit.rs": {
-      "sha256": "73dbd01c705a8d3e65b5c2cf55acbc786dce5296260770fd51b8959804d54e50",
-      "bytes": 4372,
+      "sha256": "521ac154f53f6464818d2ff63673448b19ac126d64ed957f27647b23f9a48d93",
+      "bytes": 4805,
       "mode": "0o644"
     },
     "workspace/crates/lens-macho/src/lens_reader.rs": {
-      "sha256": "03fae37b886772e26a0a97e9761bf8641cb241c2204ede3ccaed67b3b8bd12d3",
-      "bytes": 4134,
+      "sha256": "f32920c3432e6e75b54f007445f9873db25d0a80a4fe72832599fcc2b954cf4d",
+      "bytes": 4708,
       "mode": "0o644"
     },
     "workspace/crates/lens-macho/src/lens_segment.rs": {
@@ -246,7 +246,7 @@
       "mode": "0o644"
     },
     "构建配置.json": {
-      "sha256": "767c390492c719efb978788bebc9f9382c057070f83b8e2fb4f2c24d6efb877d",
+      "sha256": "c3e8fdd342b8ebae004bd3930fa7af21958d076d656637d62e3e2b56d482e4a8",
       "bytes": 88767,
       "mode": "0o644"
     },
@@ -261,8 +261,8 @@
       "mode": "0o644"
     },
     "项目文档/DEFENSIVE_SCOPE.md": {
-      "sha256": "599ea8ebc721fd1ca8f3a749d9f38f8fdcfc11c8183406f21d067f636ed5c501",
-      "bytes": 1798,
+      "sha256": "2a44f801ba06bab6f97fed18423189c8dd3b7257915eb164937e41419cd5f7c4",
+      "bytes": 2130,
       "mode": "0o644"
     },
     "项目文档/LICENSE": {
@@ -276,8 +276,8 @@
       "mode": "0o644"
     },
     "项目文档/README.md": {
-      "sha256": "54b044250438948957ed6f94d1172bc8fdea966e1b8c808d636f7bf3f26e501e",
-      "bytes": 3437,
+      "sha256": "4f8d3552a15758dfcbc71a752e9d8845a69e11c6d71de69b7dc758cdd7961e0b",
+      "bytes": 3485,
       "mode": "0o644"
     },
     "项目文档/SECURITY.md": {
@@ -296,13 +296,13 @@
       "mode": "0o644"
     },
     "项目文档/VALIDATION.md": {
-      "sha256": "3c9276473732367da08301f529326212dceda670528380f87de914672945f1b5",
-      "bytes": 5132,
+      "sha256": "3b2facb967d13891b29a1972f8c33058cc2f6a1feb5dfd4ee16ff4c30e73755d",
+      "bytes": 5988,
       "mode": "0o644"
     },
     "项目文档/VERSION_STATUS.md": {
-      "sha256": "b446e2fe7f7017f340eb4ee655057a600ae50dc34b4d4a2258968dd4cb7057de",
-      "bytes": 2307,
+      "sha256": "e0d7495c4084fc325dbde3d3cf5a13393e90e3bbd898fb551f11ef4d54469566",
+      "bytes": 2926,
       "mode": "0o644"
     },
     "项目文档/bench/REPORT.md": {

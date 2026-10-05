@@ -28,6 +28,12 @@ enum LensWhich {
 struct LensOpened {
     lens_path: PathBuf,
     lens_label: String,
+    lens_temp_dir: Option<LensIpaTempDir>,
+}
+
+struct LensIpaTempDir(PathBuf);
+impl Drop for LensIpaTempDir {
+    fn drop(&mut self) { let _ = std::fs::remove_dir_all(&self.0); }
 }
 
 enum LensMsg {
@@ -100,6 +106,7 @@ struct LensApp {
     lens_rx: Receiver<LensMsg>,
 
     lens_binary: Option<PathBuf>,
+    lens_ipa_temp_dirs: Vec<LensIpaTempDir>,
     lens_label: String,
     lens_opening: bool,
     lens_error: Option<String>,
@@ -155,6 +162,7 @@ impl LensApp {
             lens_tx: lens_tx,
             lens_rx: lens_rx,
             lens_binary: None,
+            lens_ipa_temp_dirs: Vec::new(),
             lens_label: String::new(),
             lens_opening: false,
             lens_error: None,
@@ -318,6 +326,9 @@ impl LensApp {
         while let Ok(lens_msg) = self.lens_rx.try_recv() {
             match lens_msg {
                 LensMsg::LensOpened(Ok(lens_o)) => {
+                    if let Some(lens_temp_dir) = lens_o.lens_temp_dir {
+                        self.lens_ipa_temp_dirs.push(lens_temp_dir);
+                    }
                     self.lens_binary = Some(lens_o.lens_path);
                     self.lens_label = lens_o.lens_label;
                     self.lens_opening = false;
@@ -1746,7 +1757,8 @@ fn lens_open_binary(lens_path: &Path) -> Result<LensOpened, String> {
             lens_out.file_name().unwrap_or_default().to_string_lossy(),
             lens_path.file_name().unwrap_or_default().to_string_lossy()
         );
-        Ok(LensOpened { lens_path: lens_out, lens_label: lens_label })
+        let lens_temp_dir = lens_out.parent().map(|lens_dir| LensIpaTempDir(lens_dir.to_path_buf()));
+        Ok(LensOpened { lens_path: lens_out, lens_label: lens_label, lens_temp_dir })
     } else {
         Ok(LensOpened {
             lens_path: lens_path.to_path_buf(),
@@ -1755,6 +1767,7 @@ fn lens_open_binary(lens_path: &Path) -> Result<LensOpened, String> {
                 .unwrap_or_default()
                 .to_string_lossy()
                 .into_owned(),
+            lens_temp_dir: None,
         })
     }
 }
@@ -1787,15 +1800,54 @@ fn lens_extract_ipa(lens_ipa: &Path) -> Result<PathBuf, String> {
         .or_else(|| lens_fallback.map(|(lens_n, _)| lens_n))
         .ok_or("no Payload/<App>.app/<Executable> found in .ipa")?;
 
-    let lens_out_dir = std::env::temp_dir().join("lens-gui");
-    std::fs::create_dir_all(&lens_out_dir).map_err(|lens_e| lens_e.to_string())?;
+    let mut lens_entry = lens_zip.by_name(&lens_target).map_err(|lens_e| lens_e.to_string())?;
+    let lens_out_dir = lens_private_ipa_dir()?;
     let lens_exe_name = lens_target.rsplit('/').next().unwrap_or("binary");
     let lens_out_path = lens_out_dir.join(lens_exe_name);
 
-    let mut lens_entry = lens_zip.by_name(&lens_target).map_err(|lens_e| lens_e.to_string())?;
-    let mut lens_out = std::fs::File::create(&lens_out_path).map_err(|lens_e| lens_e.to_string())?;
-    std::io::copy(&mut lens_entry, &mut lens_out).map_err(|lens_e| lens_e.to_string())?;
+    let lens_result = (|| {
+        let mut lens_options = std::fs::OpenOptions::new();
+        lens_options.write(true).create_new(true);
+        #[cfg(unix)] {
+            use std::os::unix::fs::OpenOptionsExt;
+            lens_options.mode(0o600);
+        }
+        let mut lens_out = lens_options.open(&lens_out_path)?;
+        std::io::copy(&mut lens_entry, &mut lens_out)?;
+        Ok::<(), std::io::Error>(())
+    })();
+    if let Err(lens_error) = lens_result {
+        let _ = std::fs::remove_dir_all(&lens_out_dir);
+        return Err(lens_error.to_string());
+    }
     Ok(lens_out_path)
+}
+
+fn lens_private_ipa_dir() -> Result<PathBuf, String> {
+    use std::sync::atomic::{AtomicU64, Ordering};
+    static LENS_IPA_SEQUENCE: AtomicU64 = AtomicU64::new(0);
+    for _ in 0..16 {
+        let lens_time = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map_err(|lens_error| lens_error.to_string())?
+            .as_nanos();
+        let lens_sequence = LENS_IPA_SEQUENCE.fetch_add(1, Ordering::Relaxed);
+        let lens_dir = std::env::temp_dir().join(format!(
+            "lens-gui-{}-{lens_time}-{lens_sequence}",
+            std::process::id()
+        ));
+        let mut lens_builder = std::fs::DirBuilder::new();
+        #[cfg(unix)] {
+            use std::os::unix::fs::DirBuilderExt;
+            lens_builder.mode(0o700);
+        }
+        match lens_builder.create(&lens_dir) {
+            Ok(()) => return Ok(lens_dir),
+            Err(lens_error) if lens_error.kind() == std::io::ErrorKind::AlreadyExists => continue,
+            Err(lens_error) => return Err(lens_error.to_string()),
+        }
+    }
+    Err("Cannot create a private IPA extraction directory.".to_string())
 }
 
 fn lens_window_icon() -> Option<egui::IconData> {
@@ -1827,6 +1879,49 @@ fn main() -> eframe::Result<()> {
 #[cfg(test)]
 mod lens_defensive_chat_checks {
     use super::*;
+    #[cfg(unix)]
+    #[test]
+    fn lens_ipa_extract_does_not_follow_existing_destination_symlink() {
+        use std::io::Write;
+        use std::os::unix::fs::symlink;
+
+        let lens_unique = format!(
+            "LensSymlinkProbe{}{}",
+            std::process::id(),
+            std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_nanos()
+        );
+        let lens_owned = std::env::temp_dir().join(&lens_unique);
+        std::fs::create_dir(&lens_owned).unwrap();
+        let lens_ipa = lens_owned.join("input.ipa");
+        let mut lens_zip = zip::ZipWriter::new(std::fs::File::create(&lens_ipa).unwrap());
+        lens_zip.start_file(
+            format!("Payload/{lens_unique}.app/{lens_unique}"),
+            zip::write::SimpleFileOptions::default(),
+        ).unwrap();
+        lens_zip.write_all(b"owned archive executable").unwrap();
+        lens_zip.finish().unwrap();
+
+        let lens_marker = lens_owned.join("marker");
+        std::fs::write(&lens_marker, b"untouched marker").unwrap();
+        let lens_old_dir = std::env::temp_dir().join("lens-gui");
+        std::fs::create_dir_all(&lens_old_dir).unwrap();
+        let lens_old_path = lens_old_dir.join(&lens_unique);
+        symlink(&lens_marker, &lens_old_path).unwrap();
+
+        let lens_result = lens_open_binary(&lens_ipa);
+        let lens_marker_bytes = std::fs::read(&lens_marker).unwrap();
+        let lens_extracted_bytes = lens_result.as_ref().ok().map(|lens_opened| std::fs::read(&lens_opened.lens_path).unwrap());
+        let lens_out_path = lens_result.as_ref().ok().map(|lens_opened| lens_opened.lens_path.clone());
+        let lens_open_ok = lens_result.is_ok();
+        drop(lens_result);
+        let lens_temp_removed = lens_out_path.as_ref().is_some_and(|lens_path| !lens_path.exists());
+        std::fs::remove_file(&lens_old_path).unwrap();
+        std::fs::remove_dir_all(&lens_owned).unwrap();
+        assert!(lens_open_ok);
+        assert_eq!(lens_marker_bytes, b"untouched marker");
+        assert_eq!(lens_extracted_bytes.unwrap(), b"owned archive executable");
+        assert!(lens_temp_removed);
+    }
     #[cfg(unix)]
     #[test]
     fn lens_chat_stderr_pipe_drains_while_stdout_is_streamed() {

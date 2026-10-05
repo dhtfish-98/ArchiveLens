@@ -9,6 +9,7 @@ pub struct LensMachHeader {
     pub lens_cpusubtype: u32,
     pub lens_filetype: u32,
     pub lens_ncmds: u32,
+    pub lens_sizeofcmds: u32,
     pub lens_flags: u32,
 }
 
@@ -29,7 +30,7 @@ pub fn lens_parse_header(lens_slice: &LensSlice) -> LensResult<LensMachHeader> {
     let lens_cpusubtype = lens_r.lens_read_u32()?;
     let lens_filetype = lens_r.lens_read_u32()?;
     let lens_ncmds = lens_r.lens_read_u32()?;
-    let lens__sizeofcmds = lens_r.lens_read_u32()?;
+    let lens_sizeofcmds = lens_r.lens_read_u32()?;
     let lens_flags = lens_r.lens_read_u32()?;
     let lens__reserved = lens_r.lens_read_u32()?;
     Ok(LensMachHeader {
@@ -37,16 +38,24 @@ pub fn lens_parse_header(lens_slice: &LensSlice) -> LensResult<LensMachHeader> {
         lens_cpusubtype: lens_cpusubtype,
         lens_filetype: lens_filetype,
         lens_ncmds: lens_ncmds,
+        lens_sizeofcmds: lens_sizeofcmds,
         lens_flags: lens_flags,
     })
 }
 
 pub fn lens_load_commands<'a>(lens_slice: &'a LensSlice) -> LensResult<Vec<LensLoadCommand<'a>>> {
     let lens_header = lens_parse_header(lens_slice)?;
+    let lens_cmd_end = LENS_MACH_HEADER_64_SIZE
+        .checked_add(lens_header.lens_sizeofcmds as usize)
+        .ok_or(LensError::LensEof(LENS_MACH_HEADER_64_SIZE))?;
+    if lens_cmd_end > lens_slice.lens_data.len() {
+        return Err(LensError::LensEof(lens_cmd_end));
+    }
+    let lens_cmd_area = &lens_slice.lens_data[..lens_cmd_end];
     let mut lens_out = Vec::new();
     let mut lens_offset = LENS_MACH_HEADER_64_SIZE;
     for _ in 0..lens_header.lens_ncmds {
-        let mut lens_r = LensReader::lens_at(lens_slice.lens_data, lens_offset)?;
+        let mut lens_r = LensReader::lens_at(lens_cmd_area, lens_offset)?;
         let lens_cmd = lens_r.lens_read_u32()?;
         let lens_cmdsize = lens_r.lens_read_u32()? as usize;
         if lens_cmdsize < 8 {
@@ -120,6 +129,18 @@ mod lens_tests {
     fn lens_truncated_load_command_errors() {
         let mut lens_bytes = lens_slice_with(&[(LENS_LC_UUID, vec![0xaa; 16])]);
         lens_bytes.truncate(lens_bytes.len() - 4);
+        let lens_s = LensSlice {
+            lens_cputype: LENS_CPU_TYPE_ARM64,
+            lens_cpusubtype: 0,
+            lens_data: &lens_bytes,
+        };
+        assert!(lens_load_commands(&lens_s).is_err());
+    }
+
+    #[test]
+    fn lens_rejects_command_outside_declared_area() {
+        let mut lens_bytes = lens_slice_with(&[(LENS_LC_UUID, vec![0xaa; 16])]);
+        lens_bytes[20..24].copy_from_slice(&0u32.to_le_bytes());
         let lens_s = LensSlice {
             lens_cputype: LENS_CPU_TYPE_ARM64,
             lens_cpusubtype: 0,

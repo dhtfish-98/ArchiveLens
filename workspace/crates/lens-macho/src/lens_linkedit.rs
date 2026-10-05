@@ -38,10 +38,10 @@ pub fn lens_parse_function_starts(lens_file: &[u8], lens_body: &[u8], lens_text_
     if lens_end > lens_file.len() {
         return Err(crate::LensError::LensEof(lens_dataoff));
     }
-    let mut lens_dr = LensReader::lens_at(lens_file, lens_dataoff)?;
+    let mut lens_dr = LensReader::lens_new(&lens_file[lens_dataoff..lens_end]);
     let mut lens_addr = lens_text_vmaddr;
     let mut lens_out = Vec::new();
-    while lens_dr.lens_pos() < lens_end {
+    while lens_dr.lens_pos() < lens_datasize {
         let lens_delta = lens_dr.lens_read_uleb128()?;
         if lens_delta == 0 {
             break;
@@ -88,6 +88,15 @@ mod lens_tests {
         let lens_file = vec![0u8; 8];
         let lens_body = lens_linkedit_body(1000, 10);
         assert!(lens_parse_function_starts(&lens_file, &lens_body, 0x4000).is_err());
+    }
+
+    #[test]
+    fn lens_function_starts_cannot_decode_past_declared_size() {
+        let lens_file = [0x80, 0x01, 0x00];
+        let lens_body = lens_linkedit_body(0, 1);
+        assert!(lens_parse_function_starts(&lens_file, &lens_body, 0x1000).is_err());
+        let lens_body = lens_linkedit_body(0, 3);
+        assert_eq!(lens_parse_function_starts(&lens_file, &lens_body, 0x1000).unwrap(), vec![0x1080]);
     }
 
     #[test]

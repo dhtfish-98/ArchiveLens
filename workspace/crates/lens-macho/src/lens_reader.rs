@@ -76,16 +76,18 @@ impl<'a> LensReader<'a> {
         let mut lens_shift = 0u32;
         loop {
             let lens_byte = self.lens_read_u8()?;
-            if lens_shift < 64 {
-                lens_result |= ((lens_byte & 0x7f) as u64) << lens_shift;
+            let lens_payload = lens_byte & 0x7f;
+            if lens_shift == 63 && lens_payload > 1 {
+                return Err(LensError::LensMalformed("uleb128 overflow"));
             }
+            lens_result |= (lens_payload as u64) << lens_shift;
             if lens_byte & 0x80 == 0 {
                 break;
             }
-            lens_shift += 7;
-            if lens_shift > 63 {
+            if lens_shift == 63 {
                 return Err(LensError::LensMalformed("uleb128 too long"));
             }
+            lens_shift += 7;
         }
         Ok(lens_result)
     }
@@ -124,5 +126,13 @@ mod lens_tests {
     fn lens_uleb128_multibyte() {
         let mut lens_r = LensReader::lens_new(&[0xE5, 0x8E, 0x26]);
         assert_eq!(lens_r.lens_read_uleb128().unwrap(), 624485);
+    }
+
+    #[test]
+    fn lens_uleb128_rejects_overflow_but_accepts_u64_max() {
+        let mut lens_max = LensReader::lens_new(&[0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01]);
+        assert_eq!(lens_max.lens_read_uleb128().unwrap(), u64::MAX);
+        let mut lens_overflow = LensReader::lens_new(&[0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x02]);
+        assert!(lens_overflow.lens_read_uleb128().is_err());
     }
 }

@@ -51,7 +51,7 @@ impl LensMachOImage {
                     lens_uuid = lens_parse_uuid(lens_lc.lens_body).ok();
                 }
                 LENS_LC_ENCRYPTION_INFO_64 => {
-                    lens_encryption = lens_parse_encryption(lens_lc.lens_body).ok();
+                    lens_encryption = Some(lens_parse_encryption(lens_lc.lens_body)?);
                 }
                 LENS_LC_DYLD_CHAINED_FIXUPS => {
                     lens_has_chained_fixups = true;
@@ -71,9 +71,7 @@ impl LensMachOImage {
         let mut lens_chained_fixups = Vec::new();
         for lens_lc in &lens_cmds {
             if lens_lc.lens_cmd == LENS_LC_FUNCTION_STARTS {
-                if let Ok(lens_fs) = lens_parse_function_starts(lens_slice.lens_data, lens_lc.lens_body, lens_text_vmaddr) {
-                    lens_function_starts = lens_fs;
-                }
+                lens_function_starts = lens_parse_function_starts(lens_slice.lens_data, lens_lc.lens_body, lens_text_vmaddr)?;
             }
             if lens_lc.lens_cmd == LENS_LC_DYLD_INFO || lens_lc.lens_cmd == LENS_LC_DYLD_INFO_ONLY {
                 lens_binds = lens_parse_dyld_info_binds(lens_slice.lens_data, lens_lc.lens_body, &lens_segments);
@@ -220,6 +218,22 @@ mod lens_tests {
         let lens_img = LensMachOImage::lens_parse(&lens_bytes).unwrap();
         assert!(lens_img.lens_encryption.is_some());
         assert!(!lens_img.lens_is_encrypted());
+    }
+
+    #[test]
+    fn lens_rejects_truncated_encryption_command() {
+        let lens_bytes = lens_build(&[(LENS_LC_ENCRYPTION_INFO_64, Vec::new())]);
+        assert!(LensMachOImage::lens_parse(&lens_bytes).is_err());
+    }
+
+    #[test]
+    fn lens_rejects_function_starts_past_declared_member() {
+        let mut lens_body = Vec::new();
+        lens_body.extend_from_slice(&48u32.to_le_bytes());
+        lens_body.extend_from_slice(&1u32.to_le_bytes());
+        let mut lens_bytes = lens_build(&[(LENS_LC_FUNCTION_STARTS, lens_body)]);
+        lens_bytes.extend_from_slice(&[0x80, 0x01, 0x00]);
+        assert!(LensMachOImage::lens_parse(&lens_bytes).is_err());
     }
 
     #[test]

@@ -1,5 +1,19 @@
 # Validation evidence
 
+## 1.0.6 five-observation regression — 2026-10-05
+
+On the public 1.0.5 source commit, four targeted Mach-O tests failed on the
+recorded malformed inputs, and the GUI IPA test overwrote an owned marker
+through a destination symlink. After the bounded corrections, the locked local
+workspace suite passed 113 tests, including all five regressions. The source
+now rejects malformed encryption commands, function-start members that end
+inside an encoded number, commands outside the declared command area, and
+overflowing ULEB128 numbers. GUI extraction creates a private directory,
+uses exclusive file creation, and cleans the directory when its owner drops.
+The GUI check uses an owned ZIP and marker, not
+an external assistant or an interactive window. The interrupted deep source
+audit, real GUI and device behavior, and other parser paths remain OPEN.
+
 ## 1.0.5 document-layout validation — 2026-10-05
 
 Two historical upstream guide images moved byte-for-byte from root `resources/` to `项目文档/resources/`. The retained `UPSTREAM_GUIDE.md` image link now resolves relative to that document. `RENAME_MAP.json` and `SOURCE_MANIFEST.json` record the canonical tracked paths. Runtime Rust source, test source and original upstream/third-party notices remain unchanged. On this 1.0.5 candidate, the 424-file tracked source manifest and Build-only compatibility copy matched their SHA-256 records. With the official Rust 1.99.0 toolchain installed only in Build, the locked workspace suite passed 107/107 tests and the full workspace Release build passed. Exact-commit CI and source Release verification remain separate checks from this local result and from the historical 1.0.4 GUI result below.
